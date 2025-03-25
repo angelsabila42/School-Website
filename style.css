@@ -22,3 +22,8 @@ display: block;
 .navbar li{
    float: left;
 }
+
+img {
+    width: 50px;
+    height:55px;
+}
