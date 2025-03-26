@@ -1,14 +1,47 @@
-h1 {
-    text-align: center;
-text-shadow: 3px 3px 5px rgb(41, 10, 10);
+header{
+    display:flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: rgba(246, 42, 42,0.5);
+    opacity: 0.5;
+    padding: 10px 20px;
+    top: 0;
+
 }
+
+/*Font-Families*/
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.w-montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+/*Navigation bar*/
 .navbar ul{
     list-style-type:none;
-    background-color: rgb(68, 68, 68);
     margin: 0px;
     padding: 0px;
     overflow: hidden;
 }
+
 .navbar a{
 color: white;
 text-decoration: none;
@@ -16,23 +49,143 @@ padding: 15px;
 text-align: center;
 display: block;
 }
+
 .navbar a:hover{
-   background-color: rgba(163, 159, 159, 0.829);
+   text-decoration: underline;
+   color: grey;
 }
+
 .navbar li{
    float: left;
 }
 
-img {
+/*School badge, name and motto*/
+h3 {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px rgb(41, 10, 10);
+}
+
+.logo {
     width: 50px;
-    height:55px;
+    height:auto;
+    margin-right: 10px;
+    align-items: center;
 
 }
-header{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(68, 68, 68);
-    padding: 10px 20px;
 
+.text{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+}
+
+.name{
+    margin-bottom: 0;
+}
+
+.motto{
+    margin-top: 0;
+    color: whitesmoke;
+}
+
+/*Slider*/
+.transbox{
+    background-color: rgba(3, 3, 3, 0.5);
+    position: absolute;
+    padding: 30px;
+    left: 50px;
+    top: 200px;
+    border-radius: 10px;
+    
+}
+
+
+.carousel-item img{
+    height: 600px;
+    object-fit: cover;
+}
+
+.transbox h2, .transbox p{
+    color: white;
+}
+
+/*Headteacher's Greetings*/
+.card{
+    width: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px o rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+
+}
+
+#greeting{
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 60px;
+}
+
+#headteacher{
+    
+    padding-left: 0;
+}
+
+/*.headteacher_image{
+    padding-left: 0px;
+}*/
+
+.content{
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    flex: 1;
+    
+}
+
+/*Footer*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(207, 38, 38);
+    color: white;
+    padding: 20px;
+}
+.sectionleft{
+    text-align: center;
+    width: 48%;
+    float: left;
+    margin-left: 0;
+}
+.icons{
+    text-decoration: none;
+    margin-right: 5px;
+}
+.fa-brands.fa-facebook.fa-2x{
+    color: rgb(54, 54, 214);
+}
+.fa-brands.fa-square-x-twitter.fa-2x{
+    color:rgba(0, 0, 0, 0.863);
+}
+.fa-brands.fa-linkedin.fa-2x{
+    color:rgb(68, 65, 65);
+}
+.fa-brands.fa-facebook.fa-2x:hover{
+    background-color: rgb(77, 77, 241);
+}
+.fa-brands.fa-square-x-twitter.fa-2x:hover{
+    background-color:rgba(0, 0, 0, 0.322);
+}
+.fa-brands.fa-linkedin.fa-2x:hover{
+    background-color: rgb(128, 128, 128);
+}
+
+#footer_logo{
+    width: 70px;
+    height: auto;
+    text-align: center;
 }
