@@ -1,14 +1,21 @@
-h1 {
-    text-align: center;
-text-shadow: 3px 3px 5px rgb(41, 10, 10);
+header{
+    display:flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: rgba(246, 42, 42,0.5);
+    opacity: 0.5;
+    padding: 10px 20px;
+
 }
+
+/*Navigation bar*/
 .navbar ul{
     list-style-type:none;
-    background-color: rgb(68, 68, 68);
     margin: 0px;
     padding: 0px;
     overflow: hidden;
 }
+
 .navbar a{
 color: white;
 text-decoration: none;
@@ -16,23 +23,95 @@ padding: 15px;
 text-align: center;
 display: block;
 }
+
 .navbar a:hover{
-   background-color: rgba(163, 159, 159, 0.829);
+   text-decoration: underline;
+   color: grey;
 }
+
 .navbar li{
    float: left;
 }
 
-img {
+/*School badge, name and motto*/
+h3 {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px rgb(41, 10, 10);
+}
+
+.logo {
     width: 50px;
-    height:55px;
+    height:auto;
+    margin-right: 10px;
+    align-items: center;
 
 }
-header{
-    display:flex;
+
+.text{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.info{
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: rgb(68, 68, 68);
-    padding: 10px 20px;
+
+}
+
+.name{
+    margin-bottom: 0;
+}
+
+.motto{
+    margin-top: 0;
+    color: whitesmoke;
+}
+
+/*Slider*/
+.transbox{
+    background-color: rgba(3, 3, 3, 0.5);
+    position: absolute;
+    padding: 10px;
+    left: 50px;
+    top: 200px;
+    
+}
+
+/*.carousel{
+    height: 100vh;
+    min-height: 300px;
+    background-size: cover;
+}*/
+.carousel-item img{
+    height: 600px;
+    object-fit: cover;
+}
+
+.transbox h2, .transbox p{
+    color: white;
+}
+
+/*Headteacher's Greetings*/
+#greeting{
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 60px;
+    border: 2px inset rgba(169, 159, 159,0.5);
+}
+
+#headteacher{
+    float: left;
+    margin: 20px;
+}
+
+.headteacher_image{
+    padding-left: 0px;
+}
+.content{
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 
 }
