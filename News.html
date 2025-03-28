@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
     <h1>GAYAZA HIGH SCHOOL</h1>
     <nav class="navbar">
         <ul>
@@ -27,7 +28,70 @@
             <li><a href="Contact.html">Contact us</a></li>
         </ul>
     </nav>
-    <h2>This is the home page </h2>
+    </header>
+    <h1 id="news-h1">NEWS AND EVENTS</h1>
+    <div class="news">
+        <div class="news-content">
+            <h3>Upcoming tour</h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium molestias blanditiis distinctio perspiciatis non placeat aut temporibus! Accusamus ad exercitationem laudantium consequuntur temporibus esse quisquam amet voluptates ut itaque!</P>
+        </div>
+        <div class="news-content">
+            <h3>Upcoming tour</h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium molestias blanditiis distinctio perspiciatis non placeat aut temporibus! Accusamus ad exercitationem laudantium consequuntur temporibus esse quisquam amet voluptates ut itaque!</P>
+        </div>
+        <div class="news-content">
+            <h3>Upcoming tour</h3>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium molestias blanditiis distinctio perspiciatis non placeat aut temporibus! Accusamus ad exercitationem laudantium consequuntur temporibus esse quisquam amet voluptates ut itaque!</P>
+        </div>
+    </div>
+    <div class="form">
+        <div>
+            <form action="news.php" method="POST" class="form-content">
+                <fieldset>
+                <label for="Firstname">Firstname:</label>
+                <input type="text" id="Firstname"  required><br><br>
+
+                <label for="Lastname">Lastname:</label>
+                <input type="text" id="Lastname"  required><br><br>
+               
+                <label for="password">password:</label>
+                <input type="password" id="passwords"><br><br>
+            
+                <label for="email">email:</label>
+                <input type="email" id="email" placeholder="ern@gmail.com"><br><br>
+            
+                <label for="phone">phone number:</label>
+                <input type="tel" id="phone" placeholder="+256 740882632"><br><br>
+
+                <label for="category">category:</label>
+                <label for="Student">Student</label>
+                <input type="radio" id="Student" value="Student" name="category">
+
+                <label for="Staff">Staff</label>
+                <input type="radio" id="Staff" value="Staff" name="category"><br><br>
+
+                <label for="Class">Class</label>
+                 <select id="Class">
+                  <option value="S1">S1</option>
+                  <option value="S2">S2</option>
+                  <option value="S3">S3</option>
+                  <option value="S4">S4</option>
+                  <option value="S5">S5</option>
+                  <option value="S6">S6</option> 
+                 </select><br>
+
+                 <label for="News or event">News or event</label>
+                 <textarea id="News or event" rows="3" cols="" placeholder="Type here your news or event"></textarea><br>
+                 <button>Submit</button>
+                 </fieldset>
+            </form>
+        </div>
+        <div id="thank">
+            <h3>THANK YOU</h3>
+            <P>Hello, its a pleasure to provide us with news and events keep it up</P>
+            <P>Gayaza high school will always provide quality education before, now and forever </P>
+        </div>
+    </div>
     <!--Footer-->
     <footer class="footer">
         <div class="sectionleft">
