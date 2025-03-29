@@ -1,11 +1,11 @@
 header{
     display:flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
     background-color: rgba(246, 42, 42,0.5);
     padding: 10px 20px;
     top: 0;
-    overflow: hidden;
+    overflow: visible;
 
 }
 
@@ -53,8 +53,14 @@ float: right;
 
 /*dropdown*/
 .dropdown{
-    float: left;
-    overflow: hidden;
+    /*float: left;
+    overflow: hidden;*/
+    position: relative;
+    display: inline-block;
+
+}
+.navbar{
+    background-color: black;
 }
 
 .dropdown .dropdown-butn{
