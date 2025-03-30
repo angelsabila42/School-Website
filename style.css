@@ -339,3 +339,274 @@ content*/
 
 
 
+
+/*Academics Page
+Accordion*/
+.accordion{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.active, .accordion:hover{
+    background-color: #ccc;
+}
+
+.panel{
+    padding: 0 20px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+/*Academic
+content*/
+.level-container{
+    margin: 30px 30px;
+}
+
+.heading{
+    margin: 30px 30px;
+    margin-bottom: 10px;
+    margin-top:20px ;
+}
+
+.section-panel{
+    margin-bottom: 40px;
+}
+
+.first-heading{
+    margin: 50px 30px;
+}
+
+
+    
+
+
+
+
+/*ABOUT US CSS*/
+/*body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: color #892d2d;;
+    color:#333;
+}*/
+
+
+.ttl{
+    background-image:url(Images/picture4.jpg)  ;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:left;
+    padding: 40px 10px;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    
+}
+.ttl::before{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.history {
+    background-color: white;
+    padding: 30px;
+    margin: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);  
+        
+}
+/*three column container*/
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10px;
+    flex-wrap: wrap;
+}
+/*individual coulmns*/
+.column{
+    flex: 1;
+    max-width: 30%;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    
+}
+/*background colours*/
+.light{
+    background-color: white;
+}
+.dark{
+    background-color: red;
+    color: white;
+}
+ 
+@media (max-width:900px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .column{
+        max-width: 80%;
+    }
+}
+
+/*hover effect*/
+.column:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border: 2px solid ;
+
+}
+
+
+
+
+
+
+
+/*GALLERY CSS*/
+.prom{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5pxs;
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover{
+    transform: scale(2.0) ;
+}
+
+
+
+/*ABOUT US CSS*/
+/*body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: color #892d2d;;
+    color:#333;
+}*/
+
+
+.ttl{
+    background-image:url(Images/picture4.jpg)  ;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:left;
+    padding: 40px 10px;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    
+}
+.ttl::before{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.history {
+    background-color: white;
+    padding: 30px;
+    margin: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);  
+        
+}
+/*three column container*/
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10px;
+    flex-wrap: wrap;
+}
+/*individual coulmns*/
+.column{
+    flex: 1;
+    max-width: 30%;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    
+}
+/*background colours*/
+.light{
+    background-color: white;
+}
+.dark{
+    background-color: red;
+    color: white;
+}
+ 
+@media (max-width:900px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .column{
+        max-width: 80%;
+    }
+}
+
+/*hover effect*/
+.column:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border: 2px solid ;
+
+}
+
+
+
+
+
+
+
+/*GALLERY CSS*/
+.prom{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5pxs;
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover{
+    transform: scale(2.0) ;
+}
