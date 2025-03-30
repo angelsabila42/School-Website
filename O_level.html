@@ -14,31 +14,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <header>
+     <!--Header-->
+     <header>
         <div class="info">
             <img src="Images\Gayaza logo.png" alt="School logo" class="logo"> 
             <div class="text">
-            <h3 class="name">GAYAZA HIGH SCHOOL</h3> 
+            <h4 class="name school-heading">GAYAZA HIGH SCHOOL</h4> 
             <p class="motto montserrat">Never Give Up</p>  
              </div>
              </div>
     
-             <nav class="navbar">
-                <ul class="w-montserrat">
-                    <li><a href="index.html">Home page</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Academics.html">Academics</a></li>
-                    <li><a href="News.html">News & Events</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="Contact.html">Contact us</a></li>
-                </ul>
-              </nav>
-            </header> 
+        <nav class="navbar">
+            <ul class="w-montserrat">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Academics.html">Academics</a>
+                  <ul class="dropdown">                
+                    <li><a href="O_level.html"> O level</a></li>
+                    <li><a href=A_level.html>A level </a></li>
+                  </ul>
+                
+                </li>
+                <li><a href="News.html">News & Events</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Contact.html">Contact us</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="cover-container cover-img"><img src="Images\o level.jpg" alt="O level students" class="cover-img"></div>
    
        <!--O level academic info-->
-       <h2 class="montserrat">Ordinary level</h2>
+      <b><h4 class="montserrat first-heading">ORDINARY LEVEL</h4></b>
+      <div class="level-container">
       <p> The Ugandan O-Level curriculum is designed to provide students with a comprehensive education, preparing them for both Advanced Level 
        studies and future professional courses at universities and other institutions of higher learning. The curriculum emphasizes both academic 
        knowledge and practical skills, ensuring students are well-equipped for various career paths.</p>
@@ -48,188 +60,286 @@
    
        <p>Subjects Offered in the Updated O-Level Curriculum</p>
        <p>The revised curriculum includes a mix of compulsory and elective subjects:</p>
-   
-       <b><p>Compulsory Subjects:</p></b>
-   
+       </div>
+
+       <b><h4 class="montserrat heading">Compulsory Subjects:</h4></b>
        <!--Accordion-->
+       <div class="section-panel">
        <button class="accordion">English</button>
    <div class="panel">
-       <p> Focuses on developing proficiency in reading, writing, listening, and speaking. Emphasizes grammar, vocabulary, comprehension, composition,
+       <p><b>Description:</b>Focuses on developing proficiency in reading, writing, listening, and speaking. Emphasizes grammar, vocabulary, comprehension, composition,
             and critical analysis of texts.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Composition and Comprehension), Paper 2 (Language Use and Summary).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Composition and Comprehension</li>
+                    <li>Paper 2: Language Use and Summary</li>
+                </ul>
+            </p>
    </div>
    
        <button class="accordion">Mathematics</button>
    <div class="panel">
-       <p>  Covers topics such as algebra, geometry, trigonometry, statistics, and calculus. 
+       <p><b>Description:</b>Covers topics such as algebra, geometry, trigonometry, statistics, and calculus. 
            Aims to develop logical reasoning, problem-solving skills, and numerical literacy.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Pure Mathematics), Paper 2 (Applied Mathematics).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Pure Mathematics</li>
+                    <li>Paper 2: Applied Mathematics</li>
+                </ul>
+            </p>
    </div>
    
        <button class="accordion">Biology</button>
    <div class="panel">
-       <p> Explores the study of living organisms, including cell biology, genetics, ecology, human anatomy, and physiology.
+       <p><b>Description:</b>Explores the study of living organisms, including cell biology, genetics, ecology, human anatomy, and physiology.
            Encourages practical investigations and understanding of biological processes.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory</li>
+                    <li>Paper 2: Practical</li>
+                </ul>
+            </p>
    </div>
    
        <button class="accordion">Chemistry</button>
    <div class="panel">
-       <p> Focuses on the composition, structure, properties, and changes of matter. Topics include atomic structure, chemical reactions, periodic table, and industrial processes. 
+       <p><b>Description:</b>Focuses on the composition, structure, properties, and changes of matter. Topics include atomic structure, chemical reactions, periodic table, and industrial processes. 
            Practical laboratory work is integral.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory</li>
+                    <li>Paper 2: Practical</li>
+                </ul>
+            </p>
    </div>
    
-       <button class="accordion">Physics</button>
+       <button class="accordion">Physics (General Science for learners with special needs)</button>
    <div class="panel">
-       <p> Studies the fundamental principles governing energy and matter. Covers mechanics, electricity, magnetism, waves, and modern physics concepts. 
+       <p><b>Description:</b>Studies the fundamental principles governing energy and matter. Covers mechanics, electricity, magnetism, waves, and modern physics concepts. 
            Emphasizes analytical skills and experimental techniques.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory</li>
+                    <li>Paper 2: Practical</li>
+                </ul>
+            </p>
    </div>
    
    <button class="accordion">Geography</button>
    <div class="panel">
-       <p> Examines physical and human environments. Topics include landforms, climate, population dynamics, and economic activities. 
+       <p><b>Description:</b>Examines physical and human environments. Topics include landforms, climate, population dynamics, and economic activities. 
            Encourages spatial awareness and environmental stewardship..</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Physical Geography), Paper 2 (Human and Economic Geography), Paper 3 (Fieldwork).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Physical Geography</li>
+                    <li>Paper 2: Human and Economic Geography</li>
+                    <li>Paper 3: Fieldwork</li>
+                </ul>
+            </p>
    </div>
    
    <button class="accordion">History and Political Education</button>
    <div class="panel">
-       <p> Explores historical events, movements, and figures, both locally and globally. 
+       <p><b>Description:</b>Explores historical events, movements, and figures, both locally and globally. 
            Emphasizes understanding political systems, governance, and civic responsibilities.</p>
    
-            <p><b>UCE Examination Papers</b>:  Paper 1 (East African History), Paper 2 (World History), Paper 3 (Political Education).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: East African History</li>
+                    <li>Paper 2: World History,</li>
+                    <li>Paper 3: Political Education
+                    </li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">Religious Education</button>
    <div class="panel">
-       <p> Offers insights into religious beliefs, practices, and ethics. Students can choose between Christian Religious Education (CRE) and 
+       <p><b>Description:</b>Offers insights into religious beliefs, practices, and ethics. Students can choose between Christian Religious Education (CRE) and 
            Islamic Religious Education (IRE), fostering moral development and interfaith understanding.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 and Paper 2, varying based on the chosen religious focus.</p>
+            <p><b>UCE Examination Papers:</b> Paper 1 and Paper 2, varying based on the chosen religious focus.</p>
    </div>
    
    
    <button class="accordion">Kiswahili</button>
    <div class="panel">
-       <p> Develops proficiency in Kiswahili language skills, including reading, writing, listening, and speaking. 
+       <p><b>Description:</b>Develops proficiency in Kiswahili language skills, including reading, writing, listening, and speaking. 
            Promotes appreciation of East African culture and enhances communication within the region.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Language), Paper 2 (Literature).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Language</li>
+                    <li>Paper 2: Literature</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">Physical Education</button>
    <div class="panel">
-       <p> Emphasizes physical fitness, health education, and the development of motor skills through various sports and activities. 
+       <p><b>Description:</b>Emphasizes physical fitness, health education, and the development of motor skills through various sports and activities. 
            Encourages teamwork, discipline, and a healthy lifestyle.
        </p>
    
-            <p><b>UCE Examination Papers</b>: Assessed through practical performance and theoretical understanding.</p>
+            <p><b>UCE Examination Papers:</b> Assessed through practical performance and theoretical understanding.</p>
    </div>
    
    
    <button class="accordion">Entrepreneurship</button>
    <div class="panel">
-       <p> Introduces principles of business creation, management, and innovation. 
+       <p><b>Description:</b>Introduces principles of business creation, management, and innovation. 
            Covers topics like business planning, marketing, financial literacy, and ethical business practices.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Project Work).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory</li>
+                    <li>Paper 2: Project Work</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">Literature in English</button>
    <div class="panel">
-       <p> Involves the study of prose, poetry, and drama from various cultures and time periods. 
+       <p><b>Description:</b>Involves the study of prose, poetry, and drama from various cultures and time periods. 
            Enhances analytical skills, critical thinking, and appreciation for literary artistry.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Prose and Poetry), Paper 2 (Drama and Play Analysis)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Prose and Poetry</li>
+                    <li>Paper 2: Drama and Play Analysis</li>
+                </ul>
+            </p>
+   </div>
    </div>
    
-   
-   <p><b>Note:</b> In Senior 1 and Senior 2, students study all the above compulsory subjects <span>(Literature is made compulsory as well for every O'level student).</span> In Senior 3 and Senior 4, students continue 
-   with these and may select additional elective subjects based on their interests and career aspirations.</p>
+   <div class="level-container">
+    <p><em><b>Note:</b></em> In Senior 1 and Senior 2, students study all the above compulsory subjects <span><em>(Literature is made compulsory as well for every O'level student).</em></span>
+     In Senior 3 and Senior 4, students continue with these except for Religious Education, Entrepreneurship, Physical Education and Kiswahili, one of which may be kept. 
+     They may select additional elective subjects based on their interests and career aspirations.</p>
+     </div>
    
    
    
    <!--Elective Subjects-->
-   <b><p>Elective Subjects:</p></b>
-   
+   <b><h4 class="heading">Elective Subjects:</p></h4>
+   <div class="section-panel">
    <button class="accordion">Agriculture</button>
    <div class="panel">
-       <p> Covers principles of farming, soil management, livestock care, and agribusiness. 
+       <p><b>Description:</b>Covers principles of farming, soil management, livestock care, and agribusiness. 
            Encourages sustainable agricultural practices and food security awareness.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1: (Theory), Paper 2: (Practical)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory</li>
+                    <li>Paper 2: Practical</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">Information and Communication Technology (ICT)</button>
    <div class="panel">
-       <p>  Focuses on computer applications, programming basics, networking, and digital literacy. 
+       <p><b>Description:</b>Focuses on computer applications, programming basics, networking, and digital literacy. 
            Prepares students for technology-driven careers.</p>
    
-            <p><b>UCE Examination Papers</b>:Paper 1 (Theory), Paper 2 Practical (Hands-on computing)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory</li>
+                    <li>Paper 2: Practical (Hands-on computing)</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">French</button>
    <div class="panel">
-       <p> French is one of the most widely spoken languages in the world. This subject focuses on developing listening, speaking, reading, and writing skills. 
+       <p><b>Description:</b>French is one of the most widely spoken languages in the world. This subject focuses on developing listening, speaking, reading, and writing skills. 
            Students learn French grammar, vocabulary, pronunciation, and culture, preparing them for international communication and career opportunities in diplomacy, business, and tourism.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 Grammar, Reading Comprehension, and Writing (Essay & Letter Writing), Paper 2 Listening and Speaking (Oral Communication & Pronunciation)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li> Paper 1: Grammar, Reading Comprehension, and Writing (Essay & Letter Writing),</li>
+                    <li> Paper 2: Listening and Speaking (Oral Communication & Pronunciation)</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">German</button>
    <div class="panel">
-       <p> German is a key language in Europe and is essential in industries such as engineering, science, and international trade. This subject helps students develop fluency through structured lessons in grammar, vocabulary, pronunciation, and cultural studies. 
+       <p><b>Description:</b>German is a key language in Europe and is essential in industries such as engineering, science, and international trade. This subject helps students develop fluency through structured lessons in grammar, vocabulary, pronunciation, and cultural studies. 
            Emphasis is placed on practical communication skills, including conversation and writing.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 Grammar, Reading Comprehension, and Writing (Essay & Letter Writing), Paper 2 Listening and Speaking (Oral Communication & Pronunciation)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Grammar, Reading Comprehension</li>
+                    <li>Paper 2: Writing (Essay & Letter Writing)</li>
+                    <li>Paper 3: Listening and Speaking (Oral Communication & Pronunciation)</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">Art and Design</button>
    <div class="panel">
-       <p> This subject nurtures students' creativity by introducing various art forms such as drawing, painting, sculpture, and graphic design. 
+       <p><b>Description:</b>This subject nurtures students' creativity by introducing various art forms such as drawing, painting, sculpture, and graphic design. 
            It also includes elements of fashion, interior design, and craft-making. 
            Art and Design helps students develop observational skills, imagination, and artistic expression, which are useful in creative industries.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 Theory (Music, Dance & Drama), Paper 2 Practical (Performance-based assessment)</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: Theory (Music, Dance & Drama)</li>
+                    <li>Paper 2: Practical (Performance-based assessment)</li>
+                </ul>
+            </p>
    </div>
    
    
    <button class="accordion">Performing Arts (Music, Dance, and Drama)</button>
    <div class="panel">
-       <p> Covers musical theory, dance techniques, acting, and stage performance. Enhances creativity, confidence, and artistic skills.</p>
+       <p><b>Description:</b>Covers musical theory, dance techniques, acting, and stage performance. Enhances creativity, confidence, and artistic skills.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Composition and Comprehension), Paper 2 (Language Use and Summary).</p>
+            <p><b>UCE Examination Papers:</b>
+                <ul>
+                    <li>Paper 1: (Composition and Comprehension)</li>
+                    <li>Paper 2: (Language Use and Summary)</li>
+                </ul>
+            </p>
    </div>
    
    <button class="accordion">Technology and Design</button>
    <div class="panel">
-       <p> Introduces technical drawing, mechanical and architectural design, and engineering concepts. 
+       <p><b>Description:</b>Introduces technical drawing, mechanical and architectural design, and engineering concepts. 
            Encourages innovation and problem-solving.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical)</p>
+            <p><b>UCE Examination Papers:</b> 
+                <ul>
+                    <li>Paper 1: (Theory)</li>
+                    <li>Paper 2: (Practical)</li>
+                </ul>
+            </p>
    </div>
    
    <button class="accordion">Nutrition and Food Technology</button>
    <div class="panel">
-       <p> Focuses on food preparation, diet planning, and healthy eating habits. 
+       <p><b>Description:</b>Focuses on food preparation, diet planning, and healthy eating habits. 
            Encourages practical cooking and food safety skills.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 Paper 1 (Theory), Paper 2 Practical (Cooking & Meal Planning)</p>
+            <p><b>UCE Examination Papers:</b></p>
+            <ul>
+                <li>Paper 1: Paper 1 (Theory)</li> 
+                <li>Paper 2: Practical (Cooking & Meal Planning)</li>
+            </ul>
+   </div>
    </div>
    
    

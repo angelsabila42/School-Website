@@ -14,29 +14,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-   
-    <header>
+</head>   
+
+<body>    
+     <!--Header-->
+     <header>
         <div class="info">
             <img src="Images\Gayaza logo.png" alt="School logo" class="logo"> 
             <div class="text">
-            <h3 class="name">GAYAZA HIGH SCHOOL</h3> 
+            <h4 class="name school-heading">GAYAZA HIGH SCHOOL</h4> 
             <p class="motto montserrat">Never Give Up</p>  
              </div>
              </div>
     
         <nav class="navbar">
             <ul class="w-montserrat">
-                <li><a href="index.html">Home page</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
-                <li><a href="Academics.html">Academics</a></li>
+                <li><a href="Academics.html">Academics</a>
+                  <ul class="dropdown">                
+                    <li><a href="O_level.html"> O level</a></li>
+                    <li><a href=A_level.html>A level </a></li>
+                  </ul>
+                
+                </li>
                 <li><a href="News.html">News & Events</a></li>
                 <li><a href="Gallery.html">Gallery</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
             </ul>
           </nav>
         </header>
+
+        <div class="cover-container"><img src="Images\A level.png" alt="A level students" class="cover-img"></div>
     
-    <h2 class="montserrat">Advanced level</h2>
+    <b><h2 class="montserrat first-heading ">ADVANCED LEVEL</h2></b>
+    <div class="level-container">
       <p> As one of the top schools for Government admissions each year, we offer a diverse range of A-Level subjects under the current Ugandan curriculum, 
         preparing students for any Arts or Science combination. Our well-structured program ensures that students qualify for professional courses at universities 
         and institutions of higher learning.</p>
@@ -46,75 +58,188 @@
    
        <p>Subjects Offered in the Updated O-Level Curriculum</p>
        <p>The revised curriculum includes a mix of compulsory and elective subjects:</p>
+       </div>
    
-       <b><p>Compulsory Subjects:</p></b>
-   
+
+       <!--Sciences-->
+       <b><h4 class="montserrat heading">Science Subjects</h4></b>
        <!--Accordion-->
-       <button class="accordion">English</button>
+  <div class="section-panel">
+       <button class="accordion">Physics</button>
    <div class="panel">
-       <p> Focuses on developing proficiency in reading, writing, listening, and speaking. Emphasizes grammar, vocabulary, comprehension, composition,
-            and critical analysis of texts.</p>
+       <p><b>Description</b>: Covers mechanics, electricity, waves, and modern physics. 
+        Develops problem-solving and analytical skills essential for engineering, technology, and applied sciences.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Composition and Comprehension), Paper 2 (Language Use and Summary).</p>
+            <p><b>UACE Examination Papers</b>: 
+                <ul><li>Paper 1: Mechanics and Waves</li>
+                    <li>Paper 2: Electricity and Magnetism</li>
+                    <li>Paper 3: Practical (Experimental Work)</li>                      
+                </ul>
+            </p> 
    </div>
    
        <button class="accordion">Mathematics</button>
    <div class="panel">
-       <p>  Covers topics such as algebra, geometry, trigonometry, statistics, and calculus. 
-           Aims to develop logical reasoning, problem-solving skills, and numerical literacy.</p>
+    <p><b>Description</b>: Includes algebra, calculus, probability, and 
+        applied statistics, crucial for fields like engineering, finance, and research.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Pure Mathematics), Paper 2 (Applied Mathematics).</p>
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Pure Mathematics</li>
+                    <li>Paper 2: Statistics and Mechanics</li>                             
+                </ul>
    </div>
    
        <button class="accordion">Biology</button>
    <div class="panel">
-       <p> Explores the study of living organisms, including cell biology, genetics, ecology, human anatomy, and physiology.
-           Encourages practical investigations and understanding of biological processes.</p>
+       <p>  Focuses on cell biology, genetics, physiology, and ecology, 
+        preparing students for medical and life science fields.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical)</p>
-   </div>
+        <p><b>UACE Examination Papers: </b></p> 
+            <ul><li>Paper 1: Cell and Molecular Biology, Genetics</li>
+                <li>Paper 2: Physiology and Ecology</li>
+                <li>Paper 3: Practical (Microscopy, Experiments)</li>                       
+            </ul>
+    </div>           
    
        <button class="accordion">Chemistry</button>
    <div class="panel">
-       <p> Focuses on the composition, structure, properties, and changes of matter. Topics include atomic structure, chemical reactions, periodic table, and industrial processes. 
-           Practical laboratory work is integral.</p>
+       <p>  Explores organic, inorganic, and physical chemistry, emphasizing 
+        laboratory techniques and industrial applications.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical).</p>
-   </div>
-   
-       <button class="accordion">Physics</button>
-   <div class="panel">
-       <p> Studies the fundamental principles governing energy and matter. Covers mechanics, electricity, magnetism, waves, and modern physics concepts. 
-           Emphasizes analytical skills and experimental techniques.</p>
-   
-            <p><b>UCE Examination Papers</b>: Paper 1 (Theory), Paper 2 (Practical).</p>
-   </div>
-   
+        <p><b>UACE Examination Papers: </b></p>
+                    <ul><li>Paper 1: Physical and General Chemistry</li>
+                        <li>Paper 2: Organic Chemistry</li>
+                        <li>Paper 3: Practical </li>                       
+                    </ul>                   
+    </div>
+  </div>  
+
+
+<!--Arts-->
+<b><h4 class="montserrat heading">Humanities</h4></b>
+<div class="section-panel">
    <button class="accordion">Geography</button>
    <div class="panel">
-       <p> Examines physical and human environments. Topics include landforms, climate, population dynamics, and economic activities. 
-           Encourages spatial awareness and environmental stewardship..</p>
+    <p><b>Description</b>: Covers physical geography (landforms, climate) and human geography (population, urbanization), 
+        preparing students for environmental science and planning careers.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 (Physical Geography), Paper 2 (Human and Economic Geography), Paper 3 (Fieldwork).</p>
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Physical and Human Geography</li>
+                    <li>Paper 2: Regional Geography and Map Interpretation</li>
+                    <li>Paper 3: Fieldwork (Geographical Research & Analysis)</li>                             
+                </ul>
    </div>
    
-   <button class="accordion">History and Political Education</button>
+   <button class="accordion">History</button>
    <div class="panel">
-       <p> Explores historical events, movements, and figures, both locally and globally. 
-           Emphasizes understanding political systems, governance, and civic responsibilities.</p>
+    <p><b>Description</b>: Examines world history, African history, and Uganda's historical evolution, 
+        developing research and analytical skills.</p>
    
-            <p><b>UCE Examination Papers</b>:  Paper 1 (East African History), Paper 2 (World History), Paper 3 (Political Education).</p>
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: World and European History</li>
+                    <li>Paper 2: African and Ugandan History</li>                            
+                </ul>
    </div>
    
    
-   <button class="accordion">Religious Education</button>
+   <button class="accordion">Divinity</button>
    <div class="panel">
-       <p> Offers insights into religious beliefs, practices, and ethics. Students can choose between Christian Religious Education (CRE) and 
-           Islamic Religious Education (IRE), fostering moral development and interfaith understanding.</p>
+    <p><b>Description</b>: Studies Christian beliefs, ethics, and the Bible, fostering moral and philosophical reasoning.</p>
    
-            <p><b>UCE Examination Papers</b>: Paper 1 and Paper 2, varying based on the chosen religious focus.</p>
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Old and New Testament Studies</li>
+                    <li>Paper 2: Christianity in Africa</li>                             
+                </ul>
    </div>
+   </div>
+
+   <!--Technical and Vocational-->
+   <b><h4 class="montserrat heading">Technical and Vocational Subjects</h4></b>
+   <div class="section-panel">
+   <button class="accordion">Technical Drawing</button>
+   <div class="panel">
+    <p><b>Description</b>: Develops drafting, architectural design, and engineering sketching skills essential for technical careers.</p>
    
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Geometrical Drawing & Design</li>
+                    <li>Paper 2: Building Drawing & Construction</li> 
+                    <li>Paper 3: Mechanical Drawing & Engineering</li>                             
+                </ul>
+   </div>
+
+   <button class="accordion">Entrepreneurship</button>
+   <div class="panel">
+    <p><b>Description</b>: Focuses on business management, financial literacy, and innovation, preparing 
+        students for entrepreneurship and leadership roles.</p>
+   
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Business Concepts and Management</li>
+                    <li>Paper 2: Case Study Analysis</li>                              
+                </ul>
+   </div>
+   </div>
+
+<!--Languages-->
+<b><h4 class="montserrat heading">Languages</h4></b> 
+<div class="section-panel"> 
+   <button class="accordion">French</button>
+   <div class="panel">
+    <p><b>Description</b>:  Enhances communication skills in reading, writing, listening, and speaking French,
+         with an emphasis on grammar and cultural studies.</p>
+   
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Geometrical Drawing & Design</li>
+                    <li>Paper 2: Building Drawing & Construction</li> 
+                    <li>Paper 3: Mechanical Drawing & Engineering</li>                             
+                </ul>
+   </div>
+
+   <button class="accordion">Gemarn</button>
+   <div class="panel">
+    <p><b>Description</b>: German is a widely spoken European language, particularly important in fields like engineering, 
+        business, and international relations. This subject helps students build strong communication skills in 
+        reading, writing, listening, and speaking, with a focus on grammar, vocabulary, and cultural studies. </p>
+            <p><b>UACE Examination Papers: </b></p>
+                <ul><li>Paper 1: Grammar and Composition</li>
+                    <li>Paper 2: Literature and Cultural Studies</li> 
+                    <li>Paper 3: Oral Communication (Speaking and Listening)</li>                             
+                </ul>
+   </div>
+
+<!--Creative arts and Social Sciences-->
+<b><h4 class="montserrat heading">Creative Arts an Social Sciences</h4></b>
+<div class="section-panel">
+    <button class="accordion">Literature in English</button>
+    <div class="panel">
+    <p><b>Description</b>: Covers African and world literature, analyzing prose, poetry, and drama to enhance critical thinking 
+        and interpretation skills. </p>
+         <p><b>UACE Examination Papers: </b></p>
+             <ul><li>Paper 1: Prose and Poetry</li>
+                 <li>Paper 2: Drama and Literary Criticism</li>                             
+             </ul>
+    </div>
+
+    <button class="accordion">Art and Design</button>
+    <div class="panel">
+    <p><b>Description</b>: Includes painting, sculpture, and graphic design, encouraging creative expression and technical skills in visual arts. </p>
+         <p><b>UACE Examination Papers: </b></p>
+             <ul><li>Paper 1: Art Theory and Appreciation</li>
+                 <li>Paper 2: Practical-Drawing, Painting, or Sculpture</li>                             
+             </ul>
+    </div>
+
+    <button class="accordion">Economics</button>
+    <div class="panel">
+    <p><b>Description</b>: Introduces microeconomics and macroeconomics, equipping students with knowledge in financial systems, resource management, 
+        and market structures.</p>
+         <p><b>UACE Examination Papers: </b></p>
+             <ul><li>Paper 1: Microeconomics</li>
+                 <li>Paper 2: Macroeconomics</li>                             
+             </ul>
+    </div>
+    </div>
+
+
     <!--Footer-->
     <footer class="footer">
         <div class="sectionleft">
