@@ -236,7 +236,38 @@ header, footer{
 #headteacher{
     float: left;
     margin-right: 20px;
+
+    width: 200px;
+    height:auto;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-direction: normal;
+    padding-left: 0;
    
+}
+
+@keyframes anim{
+    100%{transform: scale(0.5,0.5);}
+}
+#anima{
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    flex: 1;
+    background-color: rgba(25, 124, 25, 0.918);
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-direction: normal;
+}
+@keyframes grow {
+    100%{transform: scale(2,2);}
+    
 }
 
 .content{
@@ -286,6 +317,97 @@ header, footer{
     height: auto;
     text-align: center;
 }
+.slider{
+    width: 100%;
+    height:500px;
+    overflow: hidden;
+    background-color:lightgray;
+    text-align: center;
+    padding: 40px 20px;
+    
+}
+.slider h2{
+    font-weight: bold;
+}
+figure{
+    position: relative;
+    left: 0;
+    width: 400%;
+    animation: 10s flow infinite;
+    
+    
+}
+.sliden{
+    height: 25%;
+    width: 25%;
+    float: left;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    
+}
+@keyframes flow{
+    0%{
+        left: 0;
+    }
+    10%{
+        left: 0;
+    }
+    20%{
+        left: -100%;
+    }
+    30%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    50%{
+        left: -200%;
+    }
+    55%{
+        left: -300%;
+    }
+    65%{
+        left: -300%;
+    }
+    75%{
+        left: -200%;
+    }
+    75%{
+        left: -100%;
+    }
+    85%{
+        left: -100%;
+    }
+    90%{
+        left: 0;
+    }
+    100%{
+        left: 0;
+    }
+
+}
+.testimonial-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
 
 /*Academics Page
 Accordion*/
@@ -438,6 +560,79 @@ content*/
 .gallery img:hover{
     transform: scale(2.0) ;
 }
+/*for the news and events page*/
+#news-h1{
+    text-align: center;
+  }
+  .news{
+    display: flex;
+    justify-content: space-between;
+  }
+  .news-content{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+  }
+  .news-content:hover{
+    background-color: lightgreen;
+  }
+  .box-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  #thank{
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #555;
+    color: #fff;
+  }
+  form{
+    width: 700px;
+    height: auto;
+    margin:auto;
+    padding: 20px;
+    background:rgba(136, 131, 131, 0.61);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px ;
+
+  }
+  label{
+    display: inline-block;
+    font-weight: bold;
+    margin:10px 0 5px;
+  }
+  input, textarea, select{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  button{
+    width: 100Px;
+    padding: 2px;
+    background-color: rgba(4, 4, 194, 0.836);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+  }
+  button:hover{
+    background-color: rgba(0, 128, 0, 0.849);
+  }
 
 
 
