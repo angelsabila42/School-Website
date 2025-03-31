@@ -320,7 +320,7 @@ figure{
   .news-content:hover{
     background-color: lightgreen;
   }
-  .form{
+  .box-content{
     display: flex;
     justify-content: space-between;
   }
@@ -331,7 +331,39 @@ figure{
     flex-direction: column;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    background-color: #555;
+    color: #fff;
   }
-  .form-content{
-    margin-left: 10px;
+  form{
+    width: 700px;
+    height: auto;
+    margin:auto;
+    padding: 20px;
+    background:rgba(136, 131, 131, 0.61);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px ;
+
+  }
+  label{
+    display: inline-block;
+    font-weight: bold;
+    margin:10px 0 5px;
+  }
+  input, textarea, select{
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  button{
+    width: 100Px;
+    padding: 2px;
+    background-color: rgba(4, 4, 194, 0.836);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+  }
+  button:hover{
+    background-color: rgba(0, 128, 0, 0.849);
   }
