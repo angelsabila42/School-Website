@@ -1,6 +1,7 @@
 /* scripts.js
 
-let slideIndex = 0;
+//let slideIndex = 0;
+document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
 var i;
 /*showSlides();
@@ -52,7 +53,7 @@ for(i = 0; i < acc.length; i++) {
     });
 }
 
-//for the dynamic table
+//Function for the dynamic table
 const form = document.querySelector('form');
 const tbody = document.querySelector('tbody');
 const table = document.querySelector('table');
@@ -221,5 +222,79 @@ function onDeleteRow(e){
   
 
 form.addEventListener("submit",onAddContent);
+
+table.addEventListener("click", onDeleteRow);
+
+});
+
+
+
+//Function for the animated timer
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1200
+    });
+});
+
+//javasript code for testimanials
+let counter = 0;
+let i = 0;
+let testimonial = document.querySelectorAll(".sliden");
+
+function show(counter){
+    testimonial.forEach(tes=>{
+        tes.style.display = "none";
+    })
+  testimonial[counter].style.display = "block"
+}
+
+function slider(){
+  if(i<3){
+    i++;
+    console.log(i);
+      testimonial.forEach(tes=>{
+          tes.style.display = "none";
+      })
+    testimonial[i].style.display = "block"
+  }
+  else if(i==3){
+    i=0;
+    console.log(i);
+      testimonial.forEach(tes=>{
+          tes.style.display = "none";
+      })
+    testimonial[i].style.display = "block"
+  }
+   
+  }
+
+
+
+function prevSlide(){
+    if(counter>0){
+        counter--;
+        show(counter);
+    }
+    else if(counter==0){
+        counter=3;
+    }
+    clearInterval(clear);
+}
+function nextslide(){
+    if(counter<3){
+        counter++;
+        show(counter);
+    }
+    else if(counter==3){
+        counter=0;
+    }
+    clearInterval(clear)
+}
+let clear = setInterval(slider,4000);
+
+
+
 form.addEventListener("click", onDeleteRow);
  main
+
