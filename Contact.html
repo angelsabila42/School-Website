@@ -43,6 +43,47 @@
             </ul>
           </nav>
         </header>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <p>If you have any inquiries, feel free to reach out to us.</p>
+            <div id="error"></div>
+            <form action="#" method="post" id="form">
+                <div class="form-group">
+                    <label for="uname">Full Name</label>
+                    <br>
+                    <input type="text" id="uname" name="uname" >
+                
+                
+                    <label for="email">Email Address</label>
+                    <br>
+                    <input type="email" id="email" name="email" required>
+                
+                
+                    <label for="message">Your Message</label>
+                    <br>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+            
+                <button type="submit" id="sub">Submit</button>
+                <
+                </div>
+            </form>
+        </section>
+        
+        <section class="location">
+            <h2>Our Location</h2>
+            <p>We are located in Gayaza, Wakiso, Uganda.</p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.184776!2d32.6028264!3d0.4643518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbff62a1bbfbb%3A0xa39f70c2a124bd1c!2sGayaza%20High%20School!5e0!3m2!1sen!2sug!4v1711799477706!5m2!1sen!2sug" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
         
     <!--Footer-->
     <footer class="footer">        <div class="sectionleft">
@@ -74,47 +115,11 @@
   
         <h4>Opening Hours</h4>
         <p>Open Monday to Friday: 9am-5pm</p>
-        <section class="contact-form">
-            <h2>Contact Us</h2>
-            <p>If you have any inquiries, feel free to reach out to us.</p>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <br>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <br>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <br>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
         
-        <section class="location">
-            <h2>Our Location</h2>
-            <p>We are located in Gayaza, Wakiso, Uganda.</p>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.184776!2d32.6028264!3d0.4643518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbff62a1bbfbb%3A0xa39f70c2a124bd1c!2sGayaza%20High%20School!5e0!3m2!1sen!2sug!4v1711799477706!5m2!1sen!2sug" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
         
         </div>
   
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
