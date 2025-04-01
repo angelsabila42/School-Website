@@ -1,7 +1,9 @@
 // scripts.js
 
 let slideIndex = 0;
-showSlides();
+var acc = document.getElementsByClassName("accordion");
+var i;
+/*showSlides();
 
 // Function to show slides automatically
 function showSlides() {
@@ -25,4 +27,57 @@ function changeSlide(n) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
+}*/
+
+//Function to control the accordion
+for(i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function(){
+         //Adds or removes the active class depending on whether it is present
+        this.classList.toggle("active");
+
+        var icon = this.querySelector("i");
+        if (this.classList.contains("active")){
+            icon.classList.replace("fa-plus", "fa-minus")
+        } else {
+            icon.classList.replace("fa-minus","fa-plus");
+        }
+
+        //To control the hiding or display of the panel when clicked
+        var panel = this.nextElementSibling;
+        if(panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
+
+//for the dynamic table
+const form = document.querySelector('form');
+const tbody = document.querySelector('tbody');
+const table = document.querySelector('table');
+
+function onAddContent(e) {
+e.preventDefault();
+const subject = document.getElementById('subject').value;
+const teacher = document.getElementById('teacher').value;
+tbody.innerHTML += `
+<tr>
+    <td>${subject}</td>
+    <td>${teacher}</td>
+    <td><button class="deleteBtn">Delete</button></td>
+</tr>
+`;
+}
+
+function onDeleteRow(e){
+    if (!e.target.classList.contains('deleteBtn')){
+        return;
+    }
+    const btn = e.target;
+    btn.closest("tr").remove();
+}
+  
+
+form.addEventListener("submit",onAddContent);
+form.addEventListener("click", onDeleteRow);
