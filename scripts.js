@@ -1,12 +1,5 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-/* scripts.js
-=======
-/*// scripts.js
->>>>>>> Stashed changes
-=======
-/*// scripts.js
->>>>>>> Stashed changes
+
+
 
 //let slideIndex = 0;
 document.addEventListener("DOMContentLoaded", function(){
@@ -60,10 +53,7 @@ for(i = 0; i < acc.length; i++) {
         }
     });
 }
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-//Function for the dynamic table
+  //Function for the dynamic table
 const form = document.querySelector('form');
 const tbody = document.querySelector('tbody');
 const table = document.querySelector('table');
@@ -78,10 +68,33 @@ tbody.innerHTML += `
     <td>${teacher}</td>
     <td><button class="deleteBtn">Delete</button></td>
 </tr>
-
+`;
 }
- lightbox
 
+function onDeleteRow(e){
+    if (!e.target.classList.contains('deleteBtn')){
+        return;
+    }
+    const btn = e.target;
+    btn.closest("tr").remove();
+}
+  
+
+form.addEventListener("submit",onAddContent);
+
+table.addEventListener("click", onDeleteRow);
+});
+
+
+//Function for the animated timer
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1200
+    });
+});
+  
+  
 
 //GALLERY JS//
 const relatedImages = {
@@ -194,8 +207,6 @@ function closeLightbox() {
 
 
 
-
-
 //DARK MODE//
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -222,32 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function onDeleteRow(e){
-    if (!e.target.classList.contains('deleteBtn')){
-        return;
-    }
-    const btn = e.target;
-    btn.closest("tr").remove();
-}
-  
-
-form.addEventListener("submit",onAddContent);
-
-table.addEventListener("click", onDeleteRow);
-
-});
-
-
-
-//Function for the animated timer
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 10,
-        time: 1200
-    });
-});
-
-//javasript code for testimanials
+//javasript code for testimonials
 let counter = 0;
 let i = 0;
 let testimonial = document.querySelectorAll(".sliden");
@@ -303,97 +289,3 @@ function nextslide(){
 }
 let clear = setInterval(slider,4000);
 
-
-
-form.addEventListener("click", onDeleteRow);
- main
-
-=======
-=======
->>>>>>> Stashed changes
-
-
-//GALLERYYYY
-const albums = {
-    SchoolLife: ["Images/sl1.PNG", "Images/picture2.jpg", "Images\s12.PNG","Images/s14.PNG","Images/picture4.jpg","Images/sl5.PNG","Images\sl6.PNG","Images/picture1.jpg","Images/chapel.jpg"],
-    CulturalDay: ["Images/cd5.PNG",
-        "Images/cd4.PNG" ,
-        "Images/cd3.PNG" ,
-        "Images/cd2.PNG" ,
-        "Images/cd6.PNG", 
-        "Images/cd7.PNG",
-      "Images/cd8.PNG" ,
-       "Images/cd9.PNG"],
-    Prom: [ "Images/prom.PNG",
-                
-        "Images/prom1.PNG" ,
-    
-      "Images/prom2.PNG",
-        "Images/prom3.PNG",
-        "Images/prom4.PNG", 
-        "Images/prom5.PNG" ,
-        "Images/prom6.PNG",
-        "Images/prom7.PNG",
-        "Images/prom8.PNG", 
-        "Images/prom9.PNG", 
-        "Images/prom10.PNG", 
-        "Images/prom11.PNG",
-        "Images/prom12.PNG", 
-        "Images/prom13.PNG"],
-
-    Clubs:["Images/clubs1.PNG",
-            "Images/clubs2.PNG" ,
-            "Images/clubs3.PNG",
-            "Images/clubs4.PNG",
-            "Images/clubs5.PNG",
-            "Images/clubs6.PNG"]
-};
-function openAlbum(category) {
-    const albumContent = document.getElementById('album-content');
-    albumContent.innerHTML = "";
-    albums[category].forEach(img => {
-        const imgElement = document.createElement("img");
-        imgElement.src = img;
-        imgElement.onclick = () => openLightbox(img);
-        albumContent.appendChild(imgElement);
-    });
-    document.getElementById('album').style.display = 'block';
-}
-
-function closeAlbum() {
-    document.getElementById('album').style.display = 'none';
-}
-    //LIGHTBOX*/
-
- const albums = {
-        "School Life": ["Images/sl1.PNG", "Images/picture2.jpg", "Images/s12.PNG", "Images/s14.PNG", "Images/picture4.jpg", "Images/sl5.PNG", "Images/sl6.PNG", "Images/picture1.jpg", "Images/chapel.jpg"],
-        "Cultural Day": ["Images/cd5.PNG", "Images/cd4.PNG", "Images/cd3.PNG", "Images/cd2.PNG", "Images/cd6.PNG", "Images/cd7.PNG", "Images/cd8.PNG", "Images/cd9.PNG"],
-        "Prom": ["Images/prom.PNG", "Images/prom1.PNG", "Images/prom2.PNG", "Images/prom3.PNG", "Images/prom4.PNG", "Images/prom5.PNG", "Images/prom6.PNG", "Images/prom7.PNG", "Images/prom8.PNG", "Images/prom9.PNG", "Images/prom10.PNG", "Images/prom11.PNG", "Images/prom12.PNG", "Images/prom13.PNG"],
-        "Clubs": ["Images/clubs1.PNG", "Images/clubs2.PNG", "Images/clubs3.PNG", "Images/clubs4.PNG", "Images/clubs5.PNG", "Images/clubs6.PNG"]
-    };
-    
-function openAlbum(category) {
-        const albumContent = document.getElementById('album-content');
-        albumContent.innerHTML = "";
-        if (albums[category]) {  // Ensure category exists
-            albums[category].forEach(img => {
-                const imgElement = document.createElement("img");
-                imgElement.src = img;
-                imgElement.onclick = () => openLightbox(img);
-                albumContent.appendChild(imgElement);
-            });
-            document.getElementById('album').style.display = 'block';
-        } else {
-            console.error(`Category "${category}" not found.`);
-        }
-    }
-    
-function closeAlbum() {
-        document.getElementById('album').style.display = 'none';
-    }
-<<<<<<< Updated upstream
-    
->>>>>>> Stashed changes
-=======
-    
->>>>>>> Stashed changes
