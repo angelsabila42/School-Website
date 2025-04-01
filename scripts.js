@@ -1,4 +1,5 @@
-// scripts.js
+
+
 
 //let slideIndex = 0;
 document.addEventListener("DOMContentLoaded", function(){
@@ -52,8 +53,7 @@ for(i = 0; i < acc.length; i++) {
         }
     });
 }
-
-//Function for the dynamic table
+  //Function for the dynamic table
 const form = document.querySelector('form');
 const tbody = document.querySelector('tbody');
 const table = document.querySelector('table');
@@ -86,8 +86,6 @@ table.addEventListener("click", onDeleteRow);
 });
 
 
-
-
 //Function for the animated timer
 $(document).ready(function () {
     $(".counter").counterUp({
@@ -95,11 +93,8 @@ $(document).ready(function () {
         time: 1200
     });
 });
-
-
-
- lightbox
-
+  
+  
 
 //GALLERY JS//
 const relatedImages = {
@@ -212,8 +207,6 @@ function closeLightbox() {
 
 
 
-
-
 //DARK MODE//
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -240,8 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-//javasript code for testimanials
+//javasript code for testimonials
 let counter = 0;
 let i = 0;
 let testimonial = document.querySelectorAll(".sliden");
@@ -296,9 +288,4 @@ function nextslide(){
     clearInterval(clear)
 }
 let clear = setInterval(slider,4000);
-
-
-
-form.addEventListener("click", onDeleteRow);
- main
 

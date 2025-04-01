@@ -714,6 +714,8 @@ button {
 }
 
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*GALLERY
 .gallery { 
    
@@ -761,6 +763,12 @@ button {
      }
 
 .related-images { 
+=======
+=======
+>>>>>>> Stashed changes
+/*GALLERY CSS
+.prom{
+>>>>>>> Stashed changes
     display: flex;
      gap: 10px; 
      margin-top: 10px; }
@@ -793,11 +801,76 @@ button {
     border-radius: 5px;
 }
 
+<<<<<<< Updated upstream
 .prev { left: 10px; }
 .next { right: 10px; }
 
 .prev:hover, .next:hover {
     background: rgba(255, 255, 255, 0.3);
+=======
+.gallery img:hover{
+    transform: scale(2.0) ;
+}*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.category {
+    cursor: pointer;
+}
+.category img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.category p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#album {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: white;
+   /* padding: 20px;*/
+   
+}
+#album-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+#album img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }
 
 
