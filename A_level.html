@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>   
 
 <body>    
@@ -65,7 +67,7 @@
        <b><h4 class="montserrat heading">Science Subjects</h4></b>
        <!--Accordion-->
   <div class="section-panel">
-       <button class="accordion">Physics</button>
+       <button class="accordion">Physics<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
        <p><b>Description</b>: Covers mechanics, electricity, waves, and modern physics. 
         Develops problem-solving and analytical skills essential for engineering, technology, and applied sciences.</p>
@@ -78,7 +80,7 @@
             </p> 
    </div>
    
-       <button class="accordion">Mathematics</button>
+       <button class="accordion">Mathematics<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Includes algebra, calculus, probability, and 
         applied statistics, crucial for fields like engineering, finance, and research.</p>
@@ -89,7 +91,7 @@
                 </ul>
    </div>
    
-       <button class="accordion">Biology</button>
+       <button class="accordion">Biology<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
        <p>  Focuses on cell biology, genetics, physiology, and ecology, 
         preparing students for medical and life science fields.</p>
@@ -101,7 +103,7 @@
             </ul>
     </div>           
    
-       <button class="accordion">Chemistry</button>
+       <button class="accordion">Chemistry<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
        <p>  Explores organic, inorganic, and physical chemistry, emphasizing 
         laboratory techniques and industrial applications.</p>
@@ -118,7 +120,7 @@
 <!--Arts-->
 <b><h4 class="montserrat heading">Humanities</h4></b>
 <div class="section-panel">
-   <button class="accordion">Geography</button>
+   <button class="accordion">Geography<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Covers physical geography (landforms, climate) and human geography (population, urbanization), 
         preparing students for environmental science and planning careers.</p>
@@ -130,7 +132,7 @@
                 </ul>
    </div>
    
-   <button class="accordion">History</button>
+   <button class="accordion">History<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Examines world history, African history, and Uganda's historical evolution, 
         developing research and analytical skills.</p>
@@ -142,7 +144,7 @@
    </div>
    
    
-   <button class="accordion">Divinity</button>
+   <button class="accordion">Divinity<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Studies Christian beliefs, ethics, and the Bible, fostering moral and philosophical reasoning.</p>
    
@@ -156,7 +158,7 @@
    <!--Technical and Vocational-->
    <b><h4 class="montserrat heading">Technical and Vocational Subjects</h4></b>
    <div class="section-panel">
-   <button class="accordion">Technical Drawing</button>
+   <button class="accordion">Technical Drawing<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Develops drafting, architectural design, and engineering sketching skills essential for technical careers.</p>
    
@@ -167,7 +169,7 @@
                 </ul>
    </div>
 
-   <button class="accordion">Entrepreneurship</button>
+   <button class="accordion">Entrepreneurship<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Focuses on business management, financial literacy, and innovation, preparing 
         students for entrepreneurship and leadership roles.</p>
@@ -182,7 +184,7 @@
 <!--Languages-->
 <b><h4 class="montserrat heading">Languages</h4></b> 
 <div class="section-panel"> 
-   <button class="accordion">French</button>
+   <button class="accordion">French<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>:  Enhances communication skills in reading, writing, listening, and speaking French,
          with an emphasis on grammar and cultural studies.</p>
@@ -194,7 +196,7 @@
                 </ul>
    </div>
 
-   <button class="accordion">Gemarn</button>
+   <button class="accordion">German<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: German is a widely spoken European language, particularly important in fields like engineering, 
         business, and international relations. This subject helps students build strong communication skills in 
@@ -209,7 +211,7 @@
 <!--Creative arts and Social Sciences-->
 <b><h4 class="montserrat heading">Creative Arts an Social Sciences</h4></b>
 <div class="section-panel">
-    <button class="accordion">Literature in English</button>
+    <button class="accordion">Literature in English<i class="fa-solid fa-plus"></i></button>
     <div class="panel">
     <p><b>Description</b>: Covers African and world literature, analyzing prose, poetry, and drama to enhance critical thinking 
         and interpretation skills. </p>
@@ -219,7 +221,7 @@
              </ul>
     </div>
 
-    <button class="accordion">Art and Design</button>
+    <button class="accordion">Art and Design<i class="fa-solid fa-plus"></i></button>
     <div class="panel">
     <p><b>Description</b>: Includes painting, sculpture, and graphic design, encouraging creative expression and technical skills in visual arts. </p>
          <p><b>UACE Examination Papers: </b></p>
@@ -228,7 +230,7 @@
              </ul>
     </div>
 
-    <button class="accordion">Economics</button>
+    <button class="accordion">Economics<i class="fa-solid fa-plus"></i></button>
     <div class="panel">
     <p><b>Description</b>: Introduces microeconomics and macroeconomics, equipping students with knowledge in financial systems, resource management, 
         and market structures.</p>
@@ -239,6 +241,33 @@
     </div>
     </div>
 
+
+    <!--Dynamic Table-->
+    <div class="table-container"></div>
+    <b><h2 class="montserrat first-heading ">Teachers with their Respective Subject Allocations</h2></b>
+    <form class="form-container">
+            <label for="subject">Subject</label><br>
+            <input type="text" id="subject" name="subject"><br><br>
+
+            <label for="teacher">Teacher</label><br>
+            <input type="text" id="teacher" name="teacher"><br><br>
+
+            <button>Submit</button><br><br>
+    </form>        
+ 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Teacher</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+  
 
     <!--Footer-->
     <footer class="footer">
@@ -274,5 +303,6 @@
         </div>
   
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
