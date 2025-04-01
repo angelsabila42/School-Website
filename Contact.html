@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gayaza High School</title>
-    <link rel="stylesheet" href="contact.css">
-    <script src = scripts.js>   </script>
+    <link rel="stylesheet" href="style.css">
+    <script src = scripts.js></script>
+    <link rel="stylesheet" href="css/contact-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/449a7ce769.js" crossorigin="anonymous"></script>
@@ -14,150 +15,137 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">  
 </head>
+
 <body>
-     <!--Header-->
-     <header>
-        <div class="info">
-            <img src="Images\Gayaza logo.png" alt="School logo" class="logo"> 
-            <div class="text">
-            <h4 class="name school-heading">GAYAZA HIGH SCHOOL</h4> 
-            <p class="motto montserrat">Never Give Up</p>  
-             </div>
-             </div>
+
+    <!--Header-->
+    <header>
+    <div class="info">
+        <img src="Images\Gayaza logo.png" alt="School logo" class="logo"> 
+        <div class="text">
+        <h4 class="name school-heading">GAYAZA HIGH SCHOOL</h4> 
+        <p class="motto montserrat">Never Give Up</p>  
+         </div>
+         </div>
+
+    <nav class="navbar">
+        <ul class="w-montserrat">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Academics.html">Academics</a>
+              <ul class="dropdown">                
+                <li><a href="O_level.html"> O level</a></li>
+                <li><a href=A_level.html>A level </a></li>
+              </ul>
+            
+            </li>
+            <li><a href="News.html">News & Events</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Contact.html">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  
     
-        <nav class="navbar">
-            <ul class="w-montserrat">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Academics.html">Academics</a>
-                  <ul class="dropdown">                
-                    <li><a href="O_level.html">O level</a></li>
-                    <li><a href=A_level.html>A level </a></li>
-                  </ul>
-                
-                </li>
-                <li><a href="News.html">News & Events</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Contact.html">Contact us</a></li>
-            </ul>
-          </nav>
-         
-        </header>
- lightbox
-        <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider"></span>
-        </label>
-        
-    <!--Footer-->
-    <footer class="footer">        <div class="sectionleft">
-            <img src="Images\Gayaza logo.png" alt="School logo" id="footer_logo">
-            <h4 class="montserrat">GAYAZA HIGH SCHOOL</h4>
-            <h6>NEVER GIVE UP</h6>
-  
-            <h4 class="montserrat">About Us</h4>
-            <p class="open-sans">Gayaza High School offers the National Curriculum <br>and is a centre for Uganda National Examination Board.</p>
-           <a href="https://facebook.com" class="icons">
-                <i class="fa-brands fa-facebook fa-2x"></i>
-             </a>
-            <a href="https://twitter.com" class="icons">
-             <i class="fa-brands fa-square-x-twitter fa-2x"></i>
-            </a>
-            <a href="https://linkedin.com" class="icons">
-             <i class="fa-brands fa-linkedin fa-2x" ></i>
-            </a> 
-        </div>
-        <div class="sectionright">
-        <div>
-            <h4 class="montserrat">Get In Touch</h4>
-            <p class="montserrat">P.O.Box 729</p>
-            <p class="montserrat">Gayaza,Wakiso.</p>
-            <p class="montserrat">Phone: +25677213621</p>
-            <p class="montserrat">Email:</p> <a href="malito:admin@gayazahs.sc.ug">admin@gayazahs.sc.ug</a>
-           
-        </div>
-  
-        <h4>Opening Hours</h4>
-        <p>Open Monday to Friday: 9am-5pm</p>
-
-
- main
-        <section class="contact-form">
-            <h2>Contact Us</h2>
-            <p>If you have any inquiries, feel free to reach out to us.</p>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <br>
-                    <input type="text" id="name" name="name" required>
+        <section class="contact-section">
+            <div class="contact-info">
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p>
+                        <i class="icon fas fa-map-marker-alt"></i>
+                        P.O. Box 729, Gayaza, Wakiso, Uganda
+                    </p>
+                    <p>
+                        <i class="icon fas fa-phone"></i>
+                        +256 772 213 621
+                    </p>
+                    <p>
+                        <i class="icon fas fa-envelope"></i>
+                        admin@gayazahs.sc.ug
+                    </p>
+                    <p>
+                        <i class="icon fas fa-globe"></i>
+                        www.gayazahighschool.sc.ug
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <br>
-                    <input type="email" id="email" name="email" required>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.184776!2d32.6028264!3d0.4643518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbff62a1bbfbb%3A0xa39f70c2a124bd1c!2sGayaza%20High%20School!5e0!3m2!1sen!2sug!4v1711799477706!5m2!1sen!2sug" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <br>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        
-        <section class="location">
-            <h2>Our Location</h2>
-            <p>We are located in Gayaza, Wakiso, Uganda.</p>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.184776!2d32.6028264!3d0.4643518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbff62a1bbfbb%3A0xa39f70c2a124bd1c!2sGayaza%20High%20School!5e0!3m2!1sen!2sug!4v1711799477706!5m2!1sen!2sug" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <p>We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="615e4080-3c61-45a2-b52e-bdcf2dbd66ae">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+                    </div>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </section>
         
         
     <!--Footer-->
-    <footer class="footer">        <div class="sectionleft">
-            <img src="Images\Gayaza logo.png" alt="School logo" id="footer_logo">
-            <h4 class="montserrat">GAYAZA HIGH SCHOOL</h4>
-            <h6>NEVER GIVE UP</h6>
+    <footer class="footer">
+      <div class="sectionleft">
+          <img src="Images\Gayaza logo.png" alt="School logo" id="footer_logo">
+          <h4 class="montserrat">GAYAZA HIGH SCHOOL</h4>
+          <h6>NEVER GIVE UP</h6>
+
+          <h4 class="montserrat">About Us</h4>
+          <p class="open-sans">Gayaza High School offers the National Curriculum <br>and is a centre for Uganda National Examination Board.</p>
+         <a href="https://facebook.com" class="icons">
+              <i class="fa-brands fa-facebook fa-2x"></i>
+           </a>
+          <a href="https://twitter.com" class="icons">
+           <i class="fa-brands fa-square-x-twitter fa-2x"></i>
+          </a>
+          <a href="https://linkedin.com" class="icons">
+           <i class="fa-brands fa-linkedin fa-2x" ></i>
+          </a> 
+      </div>
+      <div class="sectionright">
+      <div>
+          <h4 class="montserrat">Get In Touch</h4>
+          <p class="montserrat">P.O.Box 729</p>
+          <p class="montserrat">Gayaza,Wakiso.</p>
+          <p class="montserrat">Phone: +25677213621</p>
+          <p class="montserrat">Email:</p> <a href="malito:admin@gayazahs.sc.ug">admin@gayazahs.sc.ug</a>
+         
+      </div>
+
+      <h4>Opening Hours</h4>
+      <p>Open Monday to Friday: 9am-5pm</p>
+      </div>
+
+  </footer>
   
-            <h4 class="montserrat">About Us</h4>
-            <p class="open-sans">Gayaza High School offers the National Curriculum <br>and is a centre for Uganda National Examination Board.</p>
-           <a href="https://facebook.com" class="icons">
-                <i class="fa-brands fa-facebook fa-2x"></i>
-             </a>
-            <a href="https://twitter.com" class="icons">
-             <i class="fa-brands fa-square-x-twitter fa-2x"></i>
-            </a>
-            <a href="https://linkedin.com" class="icons">
-             <i class="fa-brands fa-linkedin fa-2x" ></i>
-            </a> 
-        </div>
-        <div class="sectionright">
-        <div>
-            <h4 class="montserrat">Get In Touch</h4>
-            <p class="montserrat">P.O.Box 729</p>
-            <p class="montserrat">Gayaza,Wakiso.</p>
-            <p class="montserrat">Phone: +25677213621</p>
-            <p class="montserrat">Email:</p> <a href="malito:admin@gayazahs.sc.ug">admin@gayazahs.sc.ug</a>
-           
-        </div>
-  
-        <h4>Opening Hours</h4>
-        <p>Open Monday to Friday: 9am-5pm</p>
-        
-        </div>
-  
-    </footer>
-    <script src="scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
