@@ -196,7 +196,7 @@ header, footer{
   }
 
 
-/*Slider*/
+/*Image Carousel*/
 .transbox{
     background-color: rgba(3, 3, 3, 0.5);
     position: absolute;
@@ -204,7 +204,6 @@ header, footer{
     left: 50px;
     top: 200px;
     border-radius: 10px;
-    
 }
 
 
@@ -228,18 +227,24 @@ header, footer{
 }
 
 #greeting{
-    margin-top: 50px;
-    margin-left: 20px;
-    padding: 60px;
-    background-color: rosybrown;
+    margin: 50px 20px;
+    padding: 20px 60px;
+    overflow: auto;
+}
+
+.content{
+    margin-top: 20px;
+    overflow: hidden;
+    /*text-align: justify;
+    text-justify: inter-word; */
 }
 
 #headteacher{
     float: left;
     margin-right: 20px;
 
-    width: 200px;
-    height:auto;
+    /*width: 200px;
+    height:auto;*/
     animation-name: anim;
     animation-duration: 2s;
     animation-iteration-count: 2;
@@ -266,16 +271,11 @@ header, footer{
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     animation-direction: normal;
 }
+
 @keyframes grow {
-    100%{transform: scale(2,2);}
-    
+    100%{transform: scale(2,2);}  
 }
 
-.content{
-    margin-top: 20px;
-    text-align: justify;
-    text-justify: inter-word; 
-}
 
 /*Footer*/
 .footer{
@@ -397,6 +397,123 @@ figure{
     }
 
 }
+
+
+/*animated counter*/
+.counter-up{
+    background: url(Images/Career_fair.png) no-repeat;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.counter-up::before{
+    position:absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.counter-up .count-content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count-content .box {
+    width: calc(25% - 30px);
+    border: 1px dashed rgba(255,255,255,0.6);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.count-content .box .count-icon{
+    font-size: 48px;
+    color: #e6e6e6;
+}
+
+.count-content .box .counter{
+    font-size: 50px;
+    color: #f2f2f2;
+    
+}
+
+.count-content .box .text{
+    color:#ccc;
+    font-weight: 400;
+}
+
+/*Animated timer responsivenes*/
+@media (max-width: 1036px){
+    .counter-up{
+        padding: 50px 50px 0 50px;
+    }
+    .count-content .box{
+        width: calc(50% - 30px);
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 580px){
+    .content .box{
+        width: 100%;
+
+    }
+}
+.slider {
+    position: relative;
+    width: 400%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.sliden{
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /*max-width: 600px;
+    margin-left: 20px;
+    margin-right: 20px;*/
+    background-color: #fff;
+    margin: 20px 0;
+}
+.slider button{
+ 
+ background-color: #555;
+ transform: translatey(-50%);
+}
+.prev{
+    left: 0%;
+}
+.next{
+    right: 0%;
+}
+
+
+/*Testimonial*/
 .testimonial-content {
   font-size: 1rem;
   color: #555;
@@ -404,7 +521,7 @@ figure{
   font-style: italic;
 }
 .testimonial-author {
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     margin-top: 10px;
   }
@@ -479,9 +596,8 @@ form {
 
 .form-container{
     gap: 10px;
-    display: flex;
-    
-    
+    display: flex;  
+   
 }
 
 .table-container{
@@ -555,6 +671,7 @@ button {
     padding: 40px 10px;
     flex-wrap: wrap;
 }
+
 /*individual coulmns*/
 .column{
     flex: 1;
@@ -562,13 +679,14 @@ button {
     min-width: 250px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);  
 }
+
 /*background colours*/
 .light{
     background-color: white;
 }
+
 .dark{
     background-color: red;
     color: white;
@@ -614,7 +732,9 @@ button {
 .gallery img:hover{
     transform: scale(2.0) ;
 }
-/*for the news and events page*/
+
+
+/*News and events page*/
 #news-h1{
     text-align: center;
   }

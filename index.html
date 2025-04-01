@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">  
 </head>
+
 <body>
 
     <!--Header-->
@@ -45,7 +46,7 @@
       </nav>
     </header>
 
-    <!--Slider-->
+    <!--Carousel-->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -76,7 +77,7 @@
      
       <!--Headteacher's Message-->
     <section id="greeting" >
-    <h2 class="montserrat">HEADTEACHER'S GREETINGS</h2>
+    <!--<h2 class="montserrat">HEADTEACHER'S GREETINGS</h2>
     <div class="card"><div class="headteacher_image">
     <div class="content open-sans">
       <img src="Images\gayaza high school headmistress.jpg" alt="Headteacher" id="headteacher"></div>
@@ -94,13 +95,58 @@
        <p>Thank you, and may God bless you all.</p>
        <b><p>MRS. ROBINAH KIZITO</p></b></div>
        </div>
+    </div>-->
+    <div class="headteacher_image">
+      <img src="Images\headmistress2.png" alt="Headteacher" id="headteacher">
     </div>
+
+    <h2 class="content montserrat">HEADTEACHER'S GREETINGS</h2>
+    <div class="content open-sans">
+      <div><p>Ladies and gentlemen, esteemed guests, parents, students, and well-wishers,</p>
+      <p>It is with great joy and pride that I welcome you to Gayaza High School, a place of excellence, tradition, and transformation. Since our founding in 1905, we have remained committed to shaping young women into confident, God-fearing, and purpose-driven leaders who excel in academics, character, and service to their communities.</p>
+ 
+      <p> At Gayaza, we believe in nurturing not just the mind but also the heart and spirit. Our holistic approach to education ensures that every girl who walks through our gates receives the skills, knowledge, and values necessary to thrive in an ever-changing world. Through a rich curriculum, dynamic co-curricular activities, and a strong moral foundation, we empower our students to be innovative, resilient, and compassionate individuals.</p>
+
+       To our parents and guardians, thank you for entrusting us with the education of your daughters. To our alumnae, your continued support and achievements inspire us to uphold the legacy of excellence. To our students, you are the heart of this institution—may you continue to dream big, work hard, and let your light shine.
+
+       We warmly invite you to partner with us in this journey of empowerment, as we continue to shape the future, one girl at a time.
+
+       <p>Welcome to Gayaza High School—where integrity, discipline, and excellence define who we are.</p>
+
+       <p>Thank you, and may God bless you all.</p>
+       <b><p>MRS. ROBINAH KIZITO</p></b></div>
+       </div>
+    </section>
+
+    <section>
+      <div class="counter-up">
+        <div class="count-content">
+          <div class="box">
+            <div class="count-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="counter montserrat">80</div>
+            <div class="text">Staff</div>
+          </div>
+
+          <div class="box">
+            <div class="count-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="counter montserrat">1300</div>
+            <div class="text">Students</div>
+          </div>
+
+          <div class="box">
+            <div class="count-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="counter montserrat">10000</div>
+            <div class="text">Alumni</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Testimonial Carousel-->
-    <div class="slider">
+    <!--<div class="testimonials">-->
       <h2 class="montserrat">TESTIMONIALS</h2>
-      <figure>
+      <div class="slider">
+        <div class="slid">
       <div class="sliden">
           <div class="testimonial-content">
             <p>Gayaza High School shaped me into the woman I am today. Beyond academic excellence, it instilled in me discipline, leadership, and resilience.</p>
@@ -137,8 +183,10 @@
               <p> Mr. John M., Teacher</p>
           </div>
          </div>
-      </figure>
-    </div>
+         </div>
+         <button class="prev" onclick="prevSlide()">&#10094</button>
+         <button class="next" onclick="nextslide()">&#10095</button>
+        </div>
     
 
     <!--Footer-->
@@ -176,6 +224,9 @@
 
   </footer>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
