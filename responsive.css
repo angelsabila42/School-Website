@@ -1,0 +1,115 @@
+
+
+@media (max-width: 780px) {
+    .footer {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Ensure text is center-aligned */
+    }
+}
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-adjust the number of columns */
+    gap: 20px;
+}
+
+body {
+    font-size: 16px; /* Base font size */
+}
+
+h1, h2, h3 {
+    font-size: 1.5rem; /* Font size scales with root font size */
+}
+
+@media (max-width: 600px) {
+    h1, h2, h3 {
+        font-size: 1.2rem; /* Adjust font sizes on small screens */
+    }
+}
+
+.cover-img, .logo, .slider img {
+    max-width: 100%;
+    height: auto; /* Ensures images scale appropriately */
+}
+
+.slider {
+    width: 100%;
+    max-width: 100%; /* Ensure the slider is responsive */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    font-size: 1.2rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Hide hamburger menu by default */
+.hamburger {
+    display: none; 
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 780px) {
+    /* Stack the navbar links vertically and hide them initially */
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack the links vertically */
+        gap: 10px;
+        display: none; /* Hide links by default on mobile */
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Display hamburger menu on mobile screens */
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Ensure the navbar links are shown when active */
+    .navbar ul.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Adjust font size for mobile screens */
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+}
+
+/* Further adjustments for very small screens (below 480px) */
+@media screen and (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 0.9rem; /* Make font even smaller on very small screens */
+    }
+}
