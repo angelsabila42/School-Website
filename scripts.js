@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 // scripts.js
+=======
+//scripts.js
+>>>>>>> Stashed changes
 
 //let slideIndex = 0;
 document.addEventListener("DOMContentLoaded", function(){
@@ -83,6 +87,7 @@ function onDeleteRow(e){
 form.addEventListener("submit",onAddContent);
 
 table.addEventListener("click", onDeleteRow);
+<<<<<<< Updated upstream
 });
 
 
@@ -99,8 +104,24 @@ $(document).ready(function () {
 
 
  lightbox
+=======
+
+});
+>>>>>>> Stashed changes
 
 
+//Function for the animated timer
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1200
+    });
+});
+
+
+
+
+ //lightbox
 //GALLERY JS//
 const relatedImages = {
     school: [
@@ -212,8 +233,6 @@ function closeLightbox() {
 
 
 
-
-
 //DARK MODE//
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -272,7 +291,6 @@ function slider(){
   }
    
   }
-
 
 
 function prevSlide(){
