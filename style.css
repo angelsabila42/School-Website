@@ -102,10 +102,11 @@ header, footer{
     height: 90px;
     position: relative;
     z-index: 1000;
+    color: white;
 }
 
 .navbar ul li a{
-    color: white;
+   /* color: white;*/
     text-decoration: none;
     padding: 15px;
     text-align: center;
@@ -121,6 +122,20 @@ header, footer{
         display: inline-block;
     
     }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    @media (max-width: 768px) {
+        .navbar ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
    
    /*Transition*/ 
 .navbar>ul>li>a::after{
@@ -811,7 +826,7 @@ body {
 }
 
 /* Dark mode styles */
-.dark-mode,
+
 .dark-mode body,
 .dark-mode header,
 .dark-mode footer {
@@ -829,17 +844,55 @@ body {
     color: white;
 }
  .dark-mode .album h4{
+    color: white
+}
+.dark-mode .navbar ul li a {
+    color: white;
+}
+
+.dark-mode .accordion{
+    background-color: #555;
     color: white;
 
+}
+.dark-mode .contact-info{
+    background-color: black;
+}
+.dark-mode .contact-info p{
+    color: white;
+}
 
- }
-.switch {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+.dark-mode .contact-form{
+    background-color: black;
+}
+.dark-mode .contact-form p{
+    color:white;
+}
+
+.dark-mode .news-content{
+    color: black;
+}
+
+/* Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    bottom: 15px; /* Moves it to the bottom */
+    right: 15px;  /* Aligns it to the right */
+    padding: 11px;
+    font-size: 16px;
+    border: none;
     width: 50px;
-    height: 26px;
-    z-index: 1000; /* Make sure it stays on top */
+    height: 40px;
+    background: white;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+    z-index: 1000; /* Ensures the button stays on top of other elements */
+}
+
+.dark-mode #darkModeToggle {
+    color: yellow; /* Sun color */
+    background: black;
 }
 
 
@@ -914,50 +967,4 @@ body {
     align-items: center;
   }
   button:hover{
-    background-color: rgba(0, 128, 0, 0.849);
-  }
-
-
-
-/* Hide the default checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-/* Circle inside the switch */
-.slider::before {
-    content: "";
-    position: absolute;
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-/* Dark mode - Move the slider */
-input:checked + .slider {
-    background-color: grey;
-}
-
-/* Move the circle to the right when checked */
-input:checked + .slider::before {
-    transform: translateX(24px);
-}
+    background-color: rgba(0, 128, 0, 0.849);}
