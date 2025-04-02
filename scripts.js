@@ -1,4 +1,4 @@
-/* scripts.js
+// scripts.js
 
 //let slideIndex = 0;
 document.addEventListener("DOMContentLoaded", function(){
@@ -68,8 +68,36 @@ tbody.innerHTML += `
     <td>${teacher}</td>
     <td><button class="deleteBtn">Delete</button></td>
 </tr>
-
+`;
 }
+
+function onDeleteRow(e){
+    if (!e.target.classList.contains('deleteBtn')){
+        return;
+    }
+    const btn = e.target;
+    btn.closest("tr").remove();
+}
+  
+
+form.addEventListener("submit",onAddContent);
+
+table.addEventListener("click", onDeleteRow);
+});
+
+
+
+
+//Function for the animated timer
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1200
+    });
+});
+
+
+
  lightbox
 
 
@@ -212,30 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-function onDeleteRow(e){
-    if (!e.target.classList.contains('deleteBtn')){
-        return;
-    }
-    const btn = e.target;
-    btn.closest("tr").remove();
-}
-  
-
-form.addEventListener("submit",onAddContent);
-
-table.addEventListener("click", onDeleteRow);
-
-});
-
-
-
-//Function for the animated timer
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 10,
-        time: 1200
-    });
-});
 
 //javasript code for testimanials
 let counter = 0;
