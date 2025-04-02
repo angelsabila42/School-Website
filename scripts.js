@@ -1,13 +1,9 @@
-<<<<<<< Updated upstream
-// scripts.js
-=======
 //scripts.js
->>>>>>> Stashed changes
 
 //let slideIndex = 0;
 document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
-var i;
+//var i;
 /*showSlides();
 
 // Function to show slides automatically
@@ -35,7 +31,7 @@ function changeSlide(n) {
 }*/
 
 //Function to control the accordion
-for(i = 0; i < acc.length; i++) {
+for(var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function(){
          //Adds or removes the active class depending on whether it is present
         this.classList.toggle("active");
@@ -56,6 +52,153 @@ for(i = 0; i < acc.length; i++) {
         }
     });
 }
+
+//Function for the dynamic calendar
+
+let clicked = null;
+ let counter =0;
+ let events = localStorage.getItem('events')? JSON.parse(localStorage.getItem('events')):[];
+
+ const calender = document.getElementById("calender");
+const monthDisplay = document.getElementById("month");
+  let weekDays = ['Sunday','Monday','Tuesday','Wednesday',]
+ const prevBtn = document.getElementById("prev");
+ const nextBtn = document.getElementById("next");
+ const deleteEventButton = document.getElementById("deleteBtn");
+ const closeEventBtn = document.getElementById("closeBtn");
+
+ let dates = document.getElementById("dates");
+ 
+ 
+ 
+ const eventPop = document.getElementById("event");
+ let eventInput = document.getElementById("eventInput");
+ let saveEventBtn = document.getElementById("saveEvent");
+ let cauncelEvent = document.getElementById("cauncelEvent");
+
+ 
+ function openModal(date){
+  clicked = date;
+  const eventOfTheDay = events.find(e => e.date ===clicked);
+  console.log(clicked)
+  if (eventOfTheDay){
+    deleteEventModal.style.display = "block";
+  } else{
+    eventPop.style.display = "block";
+  }
+ 
+ //closeModal();
+}
+
+function date(){
+  
+  let dt = new Date();
+  if(counter !==0){
+    dt.setMonth(new Date().getMonth() + counter);
+  }
+  let day = dt.getDate();
+  let month = dt.getMonth();
+  let year = dt.getFullYear();
+
+  let firstDayOfMonth = new Date(year,month, 1);
+  let firstDay = firstDayOfMonth.getDay()
+  const daysInMonth = new Date(year, month+1, 0).getDate();
+
+  const dateString = firstDayOfMonth.toLocaleDateString('en-US',
+    {weekday:"long", month:"numeric", year: "numeric",day:"numeric"});
+
+    monthDisplay.textContent = `${dt.toLocaleDateString
+      ('en-US', {month: 'long'})} ${year}`;
+
+     
+     dates.innerHTML = '';
+  console.log(daysInMonth);
+
+  for(let i = 1; i <=firstDay+daysInMonth; i++){
+    const daySquare = document.createElement("div");
+   
+ const dayString = `${month+1}/${i-firstDay}/${year}`;
+  
+ if(i<firstDay){
+  daySquare.innerHTML = '';
+ 
+
+   }
+
+     else if(i>firstDay){
+      daySquare.innerHTML = i - firstDay;
+  
+      const eventForTheDay = events.find(e => e.date===dayString);
+      console.log(dateString)
+   
+       if(i - firstDay===0 && counter===0){
+        daySquare.classList.add("today");
+   }
+
+    if(eventForTheDay && eventForTheDay.title){
+    const eventDiv = document.createElement("div");
+    eventDiv.classList.add("eventDiv");
+    daySquare.classList.add("eventDiv")
+    eventDiv.innerHTML = (eventForTheDay.title);
+    daySquare.appendChild(eventDiv);
+
+    }
+
+    daySquare.addEventListener('click', () =>  openModal(dayString));
+
+  } 
+  dates.appendChild(daySquare);
+}
+  }
+
+  function closeModal(){
+   deleteEventModal.style.display = 'none';
+    eventPop.style.display = 'none';
+   eventInput.value = "";
+    clicked = null;
+    }
+    function saveEvent(){
+      if(eventInput.value){
+         events.push({
+          date : clicked,
+          title : eventInput.value,
+         });
+         localStorage.setItem('events', JSON.stringify(events));
+     closeModal();
+  
+      }
+    }
+
+    function deleteEvent(){
+      events = events.filter(e => e.date!==clicked);
+      localStorage.setItem('events',JSON.stringify(events));
+      closeModal();
+      date();
+    }
+   
+
+
+    saveEventBtn.addEventListener('click', saveEvent);
+    cauncelEvent.addEventListener('click', closeModal);
+    deleteEventButton.addEventListener('click', deleteEvent);
+    closeEventBtn.addEventListener('click', closeModal);
+
+    function openEventModal(){
+      eventPop.style.display = "block";
+    }
+      nextBtn.onclick = function(){
+        counter++
+        date();
+      }
+      prevBtn.addEventListener('click', () =>{
+          counter--
+          date();
+      });
+    
+
+
+    date();
+
 
 //Function for the dynamic table
 const form = document.querySelector('form');
@@ -87,189 +230,17 @@ function onDeleteRow(e){
 form.addEventListener("submit",onAddContent);
 
 table.addEventListener("click", onDeleteRow);
-<<<<<<< Updated upstream
-});
 
-
-
-
-//Function for the animated timer
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 10,
-        time: 1200
-    });
-});
-
-
-
- lightbox
-=======
-
-});
->>>>>>> Stashed changes
-
-
-//Function for the animated timer
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 10,
-        time: 1200
-    });
-});
-
-
-
-
- //lightbox
-//GALLERY JS//
-const relatedImages = {
-    school: [
-        'Images/sl1.PNG',
-        'Images/picture2.jpg',
-        'Images/s12.PNG',
-        'Images/picture4.jpg',
-        'Images/sl5.PNG',
-        'Images/schoollifenew.jpg',
-        'Images/sl6.PNG',
-        'Images/picture1.jpg',
-        'Images/chapel.jpg',
-        'Images/slnew.jpg'
-    ],
-    cultural: [
-        'Images/cd5.PNG',
-        'Images/cd4.PNG',
-        'Images/cd3.PNG',
-        'Images/cd2.PNG',
-        'Images/cd6.PNG',
-        'Images/cd7.PNG',
-        'Images/cd9.PNG'
-    ],
-    prom: [
-        'Images/prom.PNG',
-        'Images/prom1.PNG',
-        'Images/prom2.PNG',
-        'Images/prom3.PNG',
-        'Images/prom4.PNG',
-        'Images/prom5.PNG',
-        'Images/prom6.PNG',
-        'Images/prom7.PNG',
-        'Images/prom8.PNG',
-        'Images/prom10.PNG',
-        'Images/prom11.PNG',
-        'Images/prom12.PNG',
-        'Images/prom13.PNG'
-    ],
-    clubs: [
-        'Images/clubs1.PNG',
-        'Images/clubs2.PNG',
-        'Images/clubs3.PNG',
-        'Images/clubs4.PNG',
-        'Images/clubs5.PNG',
-        'Images/clubs6.PNG'
-    ],
-    sports: [
-        'Images/sportsday.jpg',
-        'Images/swimming.jpeg',
-        'Images/sports.jpg',
-        'Images/lacrosse2.jpg',
-        'Images/lacrosse.jpg',
-        'Images/hockey2.webp',
-        'Images/hockey.jpg'
-    ]
-};
-
-let currentIndex = 0; 
-let currentCategory = '';
-
-function openLightbox(category) {
-    currentCategory = category; // Set category
-    currentIndex = 0; // Start with the first image
-
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const relatedContainer = document.getElementById("related-images");
-
-    if (!relatedImages[currentCategory]) return; // Prevent errors if category is missing
-
-    console.log("Lightbox opened with:", relatedImages[currentCategory]); 
-    lightbox.style.display = "flex";
-    lightboxImg.src = relatedImages[currentCategory][currentIndex]; 
-
-    relatedContainer.innerHTML = "";
-    relatedImages[currentCategory].forEach((src, index) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.onclick = () => {
-            currentIndex = index; // Update index when clicking related images
-            lightboxImg.src = src;
-        };
-        relatedContainer.appendChild(img);
-    });
-}
-
-function nextImage(event) {
-    event.stopPropagation(); // Prevent lightbox from closing
-    if (!relatedImages[currentCategory]) return; 
-    currentIndex = (currentIndex + 1) % relatedImages[currentCategory].length;
-    updateLightboxImage();
-}
-
-function prevImage(event) {
-    event.stopPropagation(); // Prevent lightbox from closing
-    if (!relatedImages[currentCategory]) return;
-    currentIndex = (currentIndex - 1 + relatedImages[currentCategory].length) % relatedImages[currentCategory].length;
-    updateLightboxImage();
-}
-
-function updateLightboxImage() {
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = relatedImages[currentCategory][currentIndex];
-}
-
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-
-
-//DARK MODE//
-
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('darkModeToggle');
-    const rootElement = document.documentElement; // Target the entire HTML document
-
-    // Check localStorage and apply dark mode if enabled
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        rootElement.classList.add('dark-mode');
-        toggleButton.checked = true; // Update switch state
-    }
-
-    // Toggle dark mode on button click
-    toggleButton.addEventListener('change', () => {
-        rootElement.classList.toggle('dark-mode');
-
-        // Save the state to localStorage
-        if (rootElement.classList.contains('dark-mode')) {
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-        }
-    });
-});
-
-
-
-//javasript code for testimanials
-let counter = 0;
+//Testimonials
+let count = 0;
 let i = 0;
 let testimonial = document.querySelectorAll(".sliden");
 
-function show(counter){
+function show(count){
     testimonial.forEach(tes=>{
         tes.style.display = "none";
     })
-  testimonial[counter].style.display = "block"
+  testimonial[count].style.display = "block"
 }
 
 function slider(){
@@ -292,31 +263,48 @@ function slider(){
    
   }
 
-
 function prevSlide(){
-    if(counter>0){
-        counter--;
-        show(counter);
+    if(count>0){
+        count--;
+        show(count);
     }
-    else if(counter==0){
-        counter=3;
+    else if(count==0){
+        count=3;
     }
     clearInterval(clear);
 }
 function nextslide(){
-    if(counter<3){
-        counter++;
-        show(counter);
+    if(count<3){
+        count++;
+        show(count);
     }
-    else if(counter==3){
-        counter=0;
+    else if(count==3){
+        count=0;
     }
     clearInterval(clear)
 }
 let clear = setInterval(slider,4000);
 
 
+});
 
-form.addEventListener("click", onDeleteRow);
- main
+//form submission java script
+const sbt =document.getElementById("mysubmit");
+sbt.addEventListener("click", ()=>{
+    alert("Form has been submitted")
+});
+
+
+
+//Function for the animated timer
+$(document).ready(function () {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1200
+    });
+});
+
+
+
+
 
