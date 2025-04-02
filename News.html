@@ -20,7 +20,7 @@
     <h1>GAYAZA HIGH SCHOOL</h1>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home page</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Academic.html">Academics</a></li>
             <li><a href="News.html">News & Events</a></li>
@@ -29,24 +29,67 @@
         </ul>
     </nav>
     </header>
-    <h1 id="news-h1">NEWS AND EVENTS</h1>
+
+    <!--Dynamic Calendar-->
+    <div class="container" id="calender">
+        <div class="btns" id="header">
+           <button class="btn cal" id="prev">&#10094</button>
+           <span id="month"></span>
+           <button class="btn cal" id="next">&#10095</button>
+        </div>
+       
+        <div id="weekdays">
+           <span>Sun</span>
+           <span>Mon</span>
+           <span>Tue</span>
+           <span>Wed</span>
+           <span>Thur</span>
+           <span>Fri</span>
+           <span>Sat</span>
+        </div>
+       
+        <div id="dates"></div>
+        
+          </div>
+          <div id="event">
+             <span id="eventPop">
+                <h3>add an event</h3>
+                <input type="text" id="eventInput"> <br>
+                <button id="saveEvent" class="cal">Save</button>
+                <button id="cauncelEvent" class="cal">cauncel</button>
+             </span>
+           </div>
+       
+           <div id="deleteEventModal">
+             <h3>delete event?</h3>
+            <div class="btns">
+             <button id="deleteBtn" class="cal"> Delete</button>
+             <button id="closeBtn" class="cal">Close</button>
+            </div>
+           </div>
+
+    <!--News and Events-->
     <div class="news">
         <div class="news-content">
-            <h3>Upcoming tour</h3>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium molestias blanditiis distinctio perspiciatis non placeat aut temporibus! Accusamus ad exercitationem laudantium consequuntur temporibus esse quisquam amet voluptates ut itaque!</P>
+            <h3>#GAPA 2025</h3>
+            <img src="Images\myphoto1.jpg" alt="image of students at gapa" id="gapa">
+            <p>We were well presented on that, thanks to all of you who made that day a memorable at Gayaza High School</P>
         </div>
         <div class="news-content">
-            <h3>Upcoming tour</h3>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium molestias blanditiis distinctio perspiciatis non placeat aut temporibus! Accusamus ad exercitationem laudantium consequuntur temporibus esse quisquam amet voluptates ut itaque!</P>
+            <h3>ONLINE APPLICATIONS</h3>
+            <P>We thank all the 2024 s4 candidates for performing well in their exams and also those who did no make it, that they should not give up</P>
+            <p>Therefore we inform you that you can now apply for s5 at Gayaza high school online so visit our official website www.gayazahighschool.com and fill in the application form thank you</p>
         </div>
         <div class="news-content">
-            <h3>Upcoming tour</h3>
-            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident laudantium molestias blanditiis distinctio perspiciatis non placeat aut temporibus! Accusamus ad exercitationem laudantium consequuntur temporibus esse quisquam amet voluptates ut itaque!</P>
+            <h3>ANNUAL SCHOOL CAMP</h3>
+            <P>Our 12th 2025 Annual school camp is back which will take place at August 30th 2025, lets make that very colourful and historical at our school as we venture in new farm activities with our students </P>
+            <p>Make your bookings quickly don't forget that the early bird catches the snail</p>
         </div>
     </div>
+
     <div class="box-content">
         <div>
-            <form action="news.php" method="POST" >
+            <form action="/" method="GET" >
                 <fieldset>
                 <label for="Firstname">Firstname:</label>
                 <input type="text" id="Firstname"  required><br><br>
@@ -82,7 +125,7 @@
 
                  <label for="News or event">News or event</label><br>
                  <textarea id="News or event" rows="3" cols="" placeholder="Type here your news or event"></textarea><br>
-                 <button>Submit</button>
+                 <button id="mysubmit">Submit</button>
                  </fieldset>
             </form>
         </div>
@@ -126,5 +169,6 @@
         </div>
   
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
