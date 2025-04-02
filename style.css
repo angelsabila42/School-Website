@@ -22,13 +22,8 @@ header, footer{
 }
 
 
-/*School badge, name and motto
-.school-heading {
-    text-align: center;
-    color: whitesmoke;
-   /* text-shadow: 3px 3px 5px rgb(41, 10, 10);
-}
-*/
+/*School badge, name and motto*/
+
 .logo {
     width: 50px;
     height:auto;
@@ -58,6 +53,24 @@ header, footer{
 .motto{
     margin-top: 0;
     color: whitesmoke;
+}
+
+/*general page animations*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 
@@ -120,7 +133,6 @@ header, footer{
 .navbar ul li a:hover{
         color: white;
         display: inline-block;
-    
     }
 
     .navbar ul {
@@ -192,14 +204,6 @@ header, footer{
     font-weight: 500;
     font-style: normal;
   }
-
-.w-montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
-
   
 .open-sans {
     font-family: "Open Sans", sans-serif;
@@ -250,16 +254,11 @@ header, footer{
 .content{
     margin-top: 20px;
     overflow: hidden;
-    /*text-align: justify;
-    text-justify: inter-word; */
 }
 
 #headteacher{
     float: left;
     margin-right: 20px;
-
-    /*width: 200px;
-    height:auto;*/
     animation-name: anim;
     animation-duration: 2s;
     animation-iteration-count: 2;
@@ -290,6 +289,53 @@ header, footer{
 @keyframes grow {
     100%{transform: scale(2,2);}  
 }
+
+
+/*Testimonial*/
+.sliden{
+    display: none;
+    width: 50%;
+    border-radius: 10px;
+    align-items: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /*max-width: 600px;
+    margin-left: 20px;
+    margin-right: 20px;*/
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.slider{
+    position: relative;
+    width: 400%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+}
+.slider button{
+ 
+ background-color: #555;
+ transform: translatey(-50%);
+}
+.back{
+    left: 0%;
+}
+.forward{
+    right: 0%;
+}
+
+.testimonial-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.testimonial-author {
+    /*display: flex;*/
+    align-items: center;
+    margin-top: 10px;
+  }
 
 
 /*Footer*/
@@ -332,85 +378,6 @@ header, footer{
     width: 70px;
     height: auto;
     text-align: center;
-}
-.slider{
-    width: 100%;
-    height:500px;
-    overflow: hidden;
-    background-color:lightgray;
-    text-align: center;
-    padding: 40px 20px;
-    
-}
-.slider h2{
-    font-weight: bold;
-}
-figure{
-    position: relative;
-    left: 0;
-    width: 400%;
-    animation: 10s flow infinite;
-    
-    
-}
-.sliden{
-    height: 25%;
-    width: 25%;
-    float: left;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: #fff;
-    margin: 20px 0;
-    
-}
-@keyframes flow{
-    0%{
-        left: 0;
-    }
-    10%{
-        left: 0;
-    }
-    20%{
-        left: -100%;
-    }
-    30%{
-        left: -100%;
-    }
-    40%{
-        left: -200%;
-    }
-    50%{
-        left: -200%;
-    }
-    55%{
-        left: -300%;
-    }
-    65%{
-        left: -300%;
-    }
-    75%{
-        left: -200%;
-    }
-    75%{
-        left: -100%;
-    }
-    85%{
-        left: -100%;
-    }
-    90%{
-        left: 0;
-    }
-    100%{
-        left: 0;
-    }
-
 }
 
 
@@ -467,8 +434,7 @@ figure{
 
 .count-content .box .counter{
     font-size: 50px;
-    color: #f2f2f2;
-    
+    color: #f2f2f2;  
 }
 
 .count-content .box .text{
@@ -494,52 +460,98 @@ figure{
 
     }
 }
-.slider {
-    position: relative;
-    width: 400%;
-    margin: auto;
-    overflow: hidden;
-    justify-content: center;
-}
 
-.sliden{
-    display: none;
+/*Home News*/
+.news-container{
     width: 100%;
-    border-radius: 10px;
-    align-items: center; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    /*max-width: 600px;
-    margin-left: 20px;
-    margin-right: 20px;*/
-    background-color: #fff;
-    margin: 20px 0;
-}
-.slider button{
- 
- background-color: #555;
- transform: translatey(-50%);
-}
-.prev{
-    left: 0%;
-}
-.next{
-    right: 0%;
 }
 
-
-/*Testimonial*/
-.testimonial-content {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
-  font-style: italic;
+.hnews-section{
+    width: 85%;
+    margin: 20px auto;
 }
-.testimonial-author {
-    /*display: flex;*/
-    align-items: center;
-    margin-top: 10px;
-  }
+
+.hnews-section .hnews-title{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.hnews-section .hnews-title h2{
+    font-size: 40px;
+    color: #357ca6;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.hnews-section .hnews-title p{
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-top: 20px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+}
+
+.cards .cardh{
+    width: 100%;
+    position: relative;
+}
+
+.h-image-section img{
+    width: 100%;
+    height: 85%;
+}
+
+.h-content{
+    padding: 15px 20px;
+}
+
+.h-content h4{
+    font-size: 24px;
+    color: #222;
+    font-weight: 500;
+}
+
+.h-content p{
+    color: #7e7e7e;
+    font-size: 15px;
+}
+
+.h-content a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 12px;
+    display: inline-block;
+    background-color: #b23d3d;
+    padding: 8px 15px;
+}
+
+.cardh .posted-date{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: #a4ad2b;
+    padding: 6px 15px;
+}
+
+@media screen and (max-width: 992px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 
 /*Academics Page
@@ -604,7 +616,7 @@ content*/
 }
 
 /*Dynamic Table*/
-form {
+#ac-form {
     width: 500px;
     margin: 20px auto;
 }
@@ -637,22 +649,13 @@ label, input {
     font-size: 20px;
 }
 
-button {
+.dyn-table {
     display: block
 }
 
 
 
 /*ABOUT US CSS*/
-/*body{
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    background: color #892d2d;;
-    color:#333;
-}*/
-
-
 .ttl{
     background-image:url(Images/picture4.jpg)  ;
     background-size:cover;
@@ -727,6 +730,7 @@ button {
     border: 2px solid ;
 
 }
+
 
 
 /*GALLERY
@@ -896,6 +900,7 @@ body {
 }
 
 
+
 /*News and events page*/
 #news-h1{
     text-align: center;
@@ -919,6 +924,11 @@ body {
     background-color: #fff;
     margin: 20px 0;
   }
+  #gapa{
+    width: 200px;
+    height: auto;
+  }
+
   .news-content:hover{
     background-color: lightgreen;
   }
@@ -967,4 +977,178 @@ body {
     align-items: center;
   }
   button:hover{
-    background-color: rgba(0, 128, 0, 0.849);}
+
+    background-color: rgba(0, 128, 0, 0.849);
+}
+
+
+  /*Dynamic Calendar*/
+  .container{
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px;
+    min-height: 300px;
+    height: 600px;
+  width: 500px;
+    background-color: rgb(240, 91, 71);
+  
+}
+.container > div{
+    position: relative;
+    /* border: 1px solid green; */
+    margin: 5px; 
+}
+#header{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#weekdays span{
+padding: 5px;
+font-weight: bold;
+
+}
+#header.btns{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  
+}
+#weekdays{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-size: larger;
+}
+#header button{
+    font-size: 1.5em;
+    border-radius: 50px;
+    background-color: rgba(67, 204, 158,0.8);
+}
+/* button:hover{
+    background-color: rgba(67, 204, 158,0.2);
+} */
+#dates{
+    display: block grid;
+    
+   grid-template-columns: repeat(7, 1fr);
+   gap: 9px;
+   background-color:rgb(255, 255, 255,0.8);
+   margin: 0px;
+   color: black;
+   padding: 5px;
+   border-radius: 5px;
+}
+#dates > div{
+    display: grid;
+    border: 1px solid black ;
+    box-shadow: 2px 2px rgb(160, 82, 19); ;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 9px;
+    font-size: larger;
+    padding: 3px;
+    background-color: rgb(127, 255, 212,1);
+}
+#dates > div:hover{
+    background-color: rgb(127, 255, 212,.3) ;
+    
+}
+
+.cal:hover{
+    background-color: rgba(67, 204, 158,0.3);
+    color: white;
+}
+#event{
+ position: relative;
+    border: 1px solid ;
+    border-radius: 20px;
+    width: 250px;
+    height: 20%;
+    padding: 5px;
+    background-color: rgb(233, 230, 227);
+    margin: 0;
+    display: none;
+    left: 150px;
+    top: -100px;
+   transition: background-color 1s ease-in;
+   opacity: .5;
+}
+#saveEvent{
+    background-color: rgb(44, 155, 230);
+     border-radius: 4px;
+    margin-top: 4px;
+    border: none;
+   
+}
+#cauncelEvent{
+    position: relative;
+    background-color: rgba(245, 16, 16, 0.801);
+    border: none;
+    border-radius: 4px;
+}
+
+#event.visible{
+    display: block;
+    width: 50%;
+    position: relative;
+    left: 300px;
+    top: -100px;
+    animation: iam 1s ease  ;
+}
+#event:hover{
+    background-color: rgb(68, 218, 218);
+    opacity: 1;
+}
+
+@keyframes iam{
+    from {opacity: .3;}
+    to {opacity: .8;}
+}
+.emptyDay{
+    background-color: rgb(255, 255, 255,.3);
+    border: none;
+}
+#deleteEventModal{
+    position: absolute;
+    display: grid;
+    justify-content: center;
+   
+    background-color: rgb(238, 250, 246);
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 300px;
+    padding: 5px;
+    top: 200px;
+    display: none;
+    
+}
+#deleteEventModal button{
+    background-color: red;
+    border: none;
+    font-size: large;
+    color: white;
+    border-radius: 10px;
+    opacity: .6;
+}
+#deleteEventModal #closeBtn{
+    background-color: rgb(70, 78, 78);
+
+}
+#deleteEventModal button:hover{
+    opacity: 1;
+}
+.eventDiv{
+    color: red;
+    display: block;
+    font-size: medium;
+}
+.today{
+    color: rgb(57, 57, 206);
+    font-size: 1.5em;
+}
+
+
+
+
