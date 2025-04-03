@@ -31,28 +31,7 @@ function changeSlide(n) {
     slides[slideIndex - 1].style.display = "block";
 }*/
 
-//Function to control the accordion
-for(var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function(){
-         //Adds or removes the active class depending on whether it is present
-        this.classList.toggle("active");
 
-        var icon = this.querySelector("i");
-        if (this.classList.contains("active")){
-            icon.classList.replace("fa-plus", "fa-minus")
-        } else {
-            icon.classList.replace("fa-minus","fa-plus");
-        }
-
-        //To control the hiding or display of the panel when clicked
-        var panel = this.nextElementSibling;
-        if(panel.style.maxHeight){
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
 
 //Function for the dynamic calendar
 
@@ -260,36 +239,6 @@ let clear = setInterval(slider,4000);
 
   
 
- //Function for the dark mode
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleButton = document.getElementById('darkModeToggle');
-  const icon = document.getElementById('themeIcon');
-  const rootElement = document.documentElement;
-
-  // Initialize theme from localStorage (or system preference)
-  const savedTheme = localStorage.getItem('darkMode');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  // Apply dark mode if enabled in localStorage or system preference (if no localStorage)
-  if (savedTheme === 'enabled' || (!savedTheme && prefersDark)) {
-      rootElement.classList.add('dark-mode');
-      icon.classList.replace('fa-moon', 'fa-sun'); // Show sun in dark mode
-  }
-
-  // Toggle dark mode on button click
-  toggleButton.addEventListener('click', () => {
-      const isDark = rootElement.classList.toggle('dark-mode');
-
-      // Update icon and localStorage
-      if (isDark) {
-          icon.classList.replace('fa-moon', 'fa-sun');
-          localStorage.setItem('darkMode', 'enabled');
-      } else {
-          icon.classList.replace('fa-sun', 'fa-moon');
-          localStorage.setItem('darkMode', 'disabled');
-      }
-  });
-});
 
 //HAMBURGER//
 document.addEventListener("DOMContentLoaded", function () {
@@ -307,8 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
 //form submission java script
 const sbt =document.getElementById("mysubmit");
 sbt.addEventListener("click", ()=>{
@@ -316,14 +263,6 @@ sbt.addEventListener("click", ()=>{
 });
 
 
-
-
-//Function for the animated timer
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 10,
-        time: 1200
-    });
 });
 
 
