@@ -44,6 +44,7 @@
     margin-bottom: 20px;
 }
 
+
 .contact-form label {
     display: block;
     font-weight: bold;
@@ -60,6 +61,20 @@
     font-size: 16px;
 }
 
+.radio-label{
+    display: flex;
+
+}
+
+.radio-group input[type= "radio"]{
+    vertical-align: middle;
+    order: 2;
+    flex: 0;
+    margin-right: 5px;
+}
+
+
+
 .contact-form button {
     background-color: #004080;
     color: white;
@@ -74,6 +89,9 @@
 .contact-form button:hover {
     background-color: #002a5c;
 }
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
