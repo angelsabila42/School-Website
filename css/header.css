@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    height: 90px;
+    max-width: 100%;
+    background-color: rgb(211, 39, 39);
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    margin-bottom: 0;
+    color: whitesmoke;
+}
+
+.motto {
+    margin-top: 0;
+    color: whitesmoke;
+}

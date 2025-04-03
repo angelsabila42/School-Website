@@ -266,36 +266,6 @@ header, footer{
     float: left;
     margin-right: 20px;
 }
-    /*animation-name: anim;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
-    animation-play-state: running;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-direction: normal;
-    padding-left: 0;
-   
-}
-
-@keyframes anim{
-    100%{transform: scale(0.5,0.5);}
-}
-#anima{
-    margin-top: 20px;
-    text-align: justify;
-    text-justify: inter-word;
-    flex: 1;
-    background-color: rgba(25, 124, 25, 0.918);
-    animation-name: grow;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
-    animation-play-state: running;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-direction: normal;
-}
-
-@keyframes grow {
-    100%{transform: scale(2,2);}  
-}*/
 
 
 
@@ -542,11 +512,11 @@ Accordion*/
     transition: transform 0.3s;
 }
 
-.accordion.active i{
+.accordion.acctive i{
     transform: rotate(180deg);
 }
 
-.active, .accordion:hover{
+.acctive, .accordion:hover{
     background-color: #ccc;
 }
 
@@ -1053,7 +1023,4 @@ font-weight: bold;
     color: rgb(57, 57, 206);
     font-size: 1.5em;
 }
-
-
-
 
