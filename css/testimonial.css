@@ -1,0 +1,115 @@
+/* Testimonial Carousel Styling */
+.slider {
+    position: relative;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f9f5f0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.slid {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sliden {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    min-height: 300px;
+}
+
+.testimonial-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-top: auto;
+}
+
+.back, .forward {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.back {
+    left: 10px;
+}
+
+.forward {
+    right: 10px;
+}
+
+.back:hover, .forward:hover {
+    background-color: rgb(175, 0, 0);
+}
+
+/* Testimonials Heading Styling */
+h2.montserrat[text-align="center"] {
+    text-align: center;
+    color: rgb(211, 39, 39);  /* Matches header red */
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-decoration: 3px solid underline;
+    text-underline-offset: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+h2.montserrat[text-align="center"]:hover {
+    color: rgba(211, 39, 39, 0.8);
+    text-decoration-color: rgba(211, 39, 39, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        max-width: 95%;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    .testimonial-content {
+        font-size: 0.9rem;
+    }
+
+    .back, .forward {
+        padding: 8px 12px;
+    }
+
+    h2.montserrat[text-align="center"] {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sliden {
+        min-height: 400px;
+    }
+
+    .testimonial-content {
+        font-size: 0.8rem;
+    }
+}

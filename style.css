@@ -109,7 +109,7 @@ header, footer{
 }
 
 
-/*Navigation bar*/
+/*Navigation bar
 .navbar{
     padding: 0 !important;
     height: 90px !important;
@@ -144,7 +144,7 @@ header, footer{
             flex-direction: column;
             align-items: center;
         }
-    }
+    }*/
     
    
    /*Transition*/ 
@@ -1030,7 +1030,4 @@ font-weight: bold;
     color: rgb(57, 57, 206);
     font-size: 1.5em;
 }
-
-
-
 
