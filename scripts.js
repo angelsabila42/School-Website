@@ -5,8 +5,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
 
-
-
 //Function to control the accordion
 for(var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function(){
@@ -210,19 +208,6 @@ if (hamburger && navMenu) { // Ensure elements exist
 
 
 
-//HAMBURGER//
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".navbar ul");
-
-    if (hamburger && navMenu) { // Ensure elements exist
-        hamburger.addEventListener("click", function () {
-            navMenu.classList.toggle("active"); // Show or hide menu
-        });
-    } else {
-        console.error("Hamburger menu or navbar list not found.");
-    }
-});
 
 
 
