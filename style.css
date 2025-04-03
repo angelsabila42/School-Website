@@ -692,14 +692,18 @@ body {
 }
 
 /* Dark mode styles */
-
-.dark-mode body,
 .dark-mode header,
-.dark-mode footer {
+.dark-mode footer{
+    background-color: maroon;
+    color: white;
+}
+.dark-mode body {
     background-color: black;
     color: white;
 }
-
+.dark-mode .testimonial-content{
+    color: black;
+}
 .dark-mode main{
     background-color: black;
     color: black;
@@ -720,6 +724,9 @@ body {
     background-color: #555;
     color: white;
 
+}
+.dark-mode .panel{
+    color: black;
 }
 .dark-mode .contact-info{
     background-color: black;
