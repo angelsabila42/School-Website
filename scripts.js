@@ -1,36 +1,34 @@
 
 //scripts.js
 
-//let slideIndex = 0;
+
 document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
-//var i;
-/*showSlides();
 
-// Function to show slides automatically
-function showSlides() {
-    let slides = document.querySelectorAll(".carousel-slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }  
-    slides[slideIndex - 1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+
+
+//Function to control the accordion
+for(var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function(){
+         //Adds or removes the active class depending on whether it is present
+        this.classList.toggle("acctive");
+
+        var icon = this.querySelector("i");
+        if (this.classList.contains("acctive")){
+            icon.classList.replace("fa-plus", "fa-minus")
+        } else {
+            icon.classList.replace("fa-minus","fa-plus");
+        }
+
+        //To control the hiding or display of the panel when clicked
+        var panel = this.nextElementSibling;
+        if(panel.style.maxHeight){
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
 }
-
-// Function to manually control next/prev
-function changeSlide(n) {
-    slideIndex += n;
-    let slides = document.querySelectorAll(".carousel-slide");
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    if (slideIndex < 1) { slideIndex = slides.length; }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}*/
-
 
 
 //Function for the dynamic calendar
@@ -180,64 +178,36 @@ function date(){
     date();
 
 
-let count = 0;
-let i = 0;
-let testimonial = document.querySelectorAll(".sliden");
+//HAMBURGER
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar ul");
 
-
-function show(count){
-    testimonial.forEach(tes=>{
-        tes.style.display = "none";
-    })
-  testimonial[count].style.display = "block"
+if (hamburger && navMenu) { // Ensure elements exist
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active"); // Show or hide menu
+    });
+} else {
+    console.error("Hamburger menu or navbar list not found.");
 }
-
-function slider(){
-  if(i<3){
-    i++;
-    console.log(i);
-      testimonial.forEach(tes=>{
-          tes.style.display = "none";
-      })
-    testimonial[i].style.display = "block"
-  }
-  else if(i==3){
-    i=0;
-    console.log(i);
-      testimonial.forEach(tes=>{
-          tes.style.display = "none";
-      })
-    testimonial[i].style.display = "block"
-  }
-   
-  }
-
-function prevSlide(){
-    if(count>0){
-        count--;
-        show(count);
-    }
-    else if(count==0){
-        count=3;
-
-    }
-    clearInterval(clear);
-}
-
-function nextslide(){
-    if(count<3){
-        count++;
-        show(count);
-    }
-    else if(count==3){
-        count=0;
-    }
-    clearInterval(clear)
-}
-
-let clear = setInterval(slider,4000);
-
   
+});
+
+  //Function for the dark mode
+    const toggleButton = document.getElementById('darkModeToggle');
+    const icon = document.getElementById('themeIcon');
+    const rootElement = document.documentElement;
+
+    // Initialize theme from localStorage (or system preference)
+    const savedTheme = localStorage.getItem('darkMode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Apply dark mode if enabled in localStorage or system preference (if no localStorage)
+    if (savedTheme === 'enabled' || (!savedTheme && prefersDark)) {
+        rootElement.classList.add('dark-mode');
+        icon.classList.replace('fa-moon', 'fa-sun'); // Show sun in dark mode
+    }
+
+
 
 
 //HAMBURGER//
@@ -262,8 +232,28 @@ sbt.addEventListener("click", ()=>{
     alert("Form has been submitted")
 });
 
+//form validation
+const username = document.getElementById("name");
+const email = document.getElementById("email");
+const form = document.getElementById("formx");
+const errorElement = document.getElementById('error')
 
+
+form.addEventListener('submit', (e) =>{
+    let messages=[];
+    if(username.value===''||username.value==null){
+        messages.push('Name is required')
+    }
+    if(email.value.length > 20){
+        messages.push('Your email should not exeed 25 characters')
+    }
+    if(messages.length > 0){
+    e.preventDefault();
+    errorElement.innerText = messages.join(', ')
+}
+})
 });
+
 
 
 
