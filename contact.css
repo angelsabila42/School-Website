@@ -125,50 +125,6 @@
     }
 }
 
-/*Testimonial*/
-.sliden{
-    display: none;
-    width: 50%;
-    border-radius: 10px;
-    align-items: center; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-.slider{
-    position: relative;
-    width: 400%;
-    margin: auto;
-    overflow: hidden;
-    justify-content: center;
-}
-
-.slider button{
- background-color: #555;
- transform: translatey(-50%);
-}
-
-.back{
-    left: 0%;
-}
-
-.forward{
-    right: 0%;
-}
-
-.testimonial-content {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
-  font-style: italic;
-}
-
-.testimonial-author {
-    align-items: center;
-    margin-top: 10px;
-  }
 
   /*ABOUT US CSS*/
 .history {
