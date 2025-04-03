@@ -71,7 +71,7 @@ h1, h2, h3 {
 }
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
     /* Stack the navbar links vertically and hide them initially */
     .navbar {
         flex-direction: column; /* Stack items vertically */
