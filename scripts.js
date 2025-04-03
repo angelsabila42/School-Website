@@ -201,38 +201,20 @@ function date(){
     date();
 
 
-//Function for the dynamic table
-const form = document.querySelector('form');
-const tbody = document.querySelector('tbody');
-const table = document.querySelector('table');
+//HAMBURGER
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navbar ul");
 
-function onAddContent(e) {
-e.preventDefault();
-const subject = document.getElementById('subject').value;
-const teacher = document.getElementById('teacher').value;
-tbody.innerHTML += `
-<tr>
-    <td>${subject}</td>
-    <td>${teacher}</td>
-    <td><button class="deleteBtn">Delete</button></td>
-</tr>
-`;
+if (hamburger && navMenu) { // Ensure elements exist
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active"); // Show or hide menu
+    });
+} else {
+    console.error("Hamburger menu or navbar list not found.");
 }
-
-function onDeleteRow(e){
-    if (!e.target.classList.contains('deleteBtn')){
-        return;
-    }
-    const btn = e.target;
-    btn.closest("tr").remove();
-}
-  
-
-form.addEventListener("submit",onAddContent);
-
-table.addEventListener("click", onDeleteRow);
   
 });
+
 
 //Testimonials
 let count = 0;
@@ -278,6 +260,7 @@ function prevSlide(){
     }
     clearInterval(clear);
 }
+
 function nextslide(){
     if(count<3){
         count++;
@@ -288,10 +271,11 @@ function nextslide(){
     }
     clearInterval(clear)
 }
+
 let clear = setInterval(slider,4000);
+
   
   //Function for the dark mode
-document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('darkModeToggle');
     const icon = document.getElementById('themeIcon');
     const rootElement = document.documentElement;
@@ -304,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (savedTheme === 'enabled' || (!savedTheme && prefersDark)) {
         rootElement.classList.add('dark-mode');
         icon.classList.replace('fa-moon', 'fa-sun'); // Show sun in dark mode
+    }
 
 
     // Toggle dark mode on button click
@@ -319,22 +304,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('darkMode', 'disabled');
         }
     });
-});
-
-//HAMBURGER//
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".navbar ul");
-
-    if (hamburger && navMenu) { // Ensure elements exist
-        hamburger.addEventListener("click", function () {
-            navMenu.classList.toggle("active"); // Show or hide menu
-        });
-    } else {
-        console.error("Hamburger menu or navbar list not found.");
-    }
-});
-
 
 
 
@@ -346,13 +315,7 @@ sbt.addEventListener("click", ()=>{
 
 
 
-//Function for the animated timer
-$(document).ready(function () {
-    $(".counter").counterUp({
-        delay: 10,
-        time: 1200
-    });
-});
+
 
 
 
