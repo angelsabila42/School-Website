@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
 
 
+
 //Function to control the accordion
 for(var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function(){
@@ -28,6 +29,7 @@ for(var i = 0; i < acc.length; i++) {
         }
     });
 }
+
 
 //Function for the dynamic calendar
 
@@ -206,19 +208,21 @@ if (hamburger && navMenu) { // Ensure elements exist
     }
 
 
-    // Toggle dark mode on button click
-    toggleButton.addEventListener('click', () => {
-        const isDark = rootElement.classList.toggle('dark-mode');
 
-        // Update icon and localStorage
-        if (isDark) {
-            icon.classList.replace('fa-moon', 'fa-sun');
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            icon.classList.replace('fa-sun', 'fa-moon');
-            localStorage.setItem('darkMode', 'disabled');
-        }
-    });
+
+//HAMBURGER//
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) { // Ensure elements exist
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("active"); // Show or hide menu
+        });
+    } else {
+        console.error("Hamburger menu or navbar list not found.");
+    }
+});
 
 
 
@@ -234,6 +238,7 @@ const email = document.getElementById("email");
 const form = document.getElementById("formx");
 const errorElement = document.getElementById('error')
 
+
 form.addEventListener('submit', (e) =>{
     let messages=[];
     if(username.value===''||username.value==null){
@@ -247,6 +252,8 @@ form.addEventListener('submit', (e) =>{
     errorElement.innerText = messages.join(', ')
 }
 })
+});
+
 
 
 

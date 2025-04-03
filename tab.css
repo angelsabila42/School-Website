@@ -1,0 +1,26 @@
+/*Tabbed Content*/
+#tabPars{
+    display: inline grid;
+   background-color: rgb(231, 224, 224,.6);
+    width: 60%;
+    border-radius: 20px;
+    padding: 5px;
+    
+ }
+.pars{
+    display: none;
+}
+#tabs{
+    display: inline grid;
+    /* width: 30%; */
+}.btns{
+  border: none;
+  width: 200px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: rgb(68, 68, 68,.6);
+  color: white;
+}
+#tabs button:hover{
+    background-color: rgb(68, 68, 68,.4);
+}

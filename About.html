@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="tab.css">
+    <link rel="shortcut icon" href="Images/1.jpg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/449a7ce769.js" crossorigin="anonymous"></script>
@@ -56,6 +58,7 @@
             <h3>Our History.</h3>
         </div>-->
 
+        <section>
         <b><h2 class="h-montserrat first-heading ">ABOUT US</h2></b>
         
        <section class="history block">
@@ -79,10 +82,21 @@
     </div>
        </section>
 
-       <section class="history content block">
-    <div >
-        <img src="Images\aboutimg.webp" alt="A level students" id="us-today">
-    </div>    
+       <section class="history block">
+       <div class="tabs" id="tabs">
+   
+        <button class="btns" id="usToday">Us today.</button>
+        <button class="btns" id="managementbtn">Our management.</button>
+        <button class="btns" id="locationbtn">Our location.</button>
+        <button class="btns" id="joinUsbtn">Join us</button>
+        <button class="btns" id="feesbtn">Our fees structure.</button>
+        </div>
+        </section>
+
+        <div  id="tabPars">
+            <div id="currently" class="pars">
+              <section class="history content block">
+                   
     <h4 class="content montserrat">Us Today</h4>  
 
     <div class="content open-sans justify">
@@ -106,7 +120,9 @@
      </p>
        </div>
        </section>
+       </div>
 
+       <div class="pars" id="management">
        <section class="history content block">
        <h4 class="content montserrat">Our management</h4>
        <div class="content open-sans justify">
@@ -116,8 +132,9 @@
       and Dean for upper School(S5-S6). <br>
       A senior man and a senior woman also support the school affairs regarding the student affairs. 
        </div>
+    </div>
 
-       <div>
+       <div class="pars" id="direction">
         <h4 class="content montserrat">Our location</h4>
         <div class="content open-sans justify">
             <p>
@@ -127,7 +144,7 @@
         </div>
        </div>
 
-         <div class="content justify">
+         <div class="content justify pars" id="joinUs">
             <h4 class="montserrat">Join us!</h4>
             <p  class="open-sans justify">
             You can join Gayaza High school through using our on line platform
@@ -135,20 +152,21 @@
             </p>
             </div>
 
-            <div class="content open-sans justify">
+            <div class="content open-sans justify pars" id="fees">
                 <h4>Our fees structure</h4>
-                <table border ="1">
+                <table class="about-table">
                     <tr><th>NO</th><th>CLASS</th><th>AMOUNT</th></tr>
                     <tr><td>1</td><td>S.1</td> <td>UGX 2,434,450</td></tr>
                     <tr><td>2</td><td>S.2</td> <td>UGX 2,434,500</td></tr>
                     <tr><td>3</td><td>S.3</td> <td>UGX 2,553,100</td></tr>
                     <tr><td>4</td><td>S.4</td> <td>UGX 2,580,350</td></tr>
-                    <tr><td>5</td><td>S.5</td> <td>UGX 2,600,200 <td></tr>
+                    <tr><td>5</td><td>S.5</td> <td>UGX 2,600,350</td></tr>
                     <tr><td>6</td><td>S.6</td> <td>UGX 2,610,200</td></tr>
                 </table>
             </div>
+        </div>
 
-        <section class = "container content open-sans">  
+        <section class = "container open-sans abt-content block">  
             <div class = "column light">
              <h3 class="montserrat">Our Motto</h3>
                 Never give up.
@@ -177,6 +195,7 @@
        <button id="darkModeToggle">
         <i id="themeIcon" class="fas fa-moon"></i> 
     </button>
+    </section>
 
        </main>
     <!--Footer-->
@@ -214,5 +233,7 @@
   
     </footer>
     <script src="scripts.js"></script>
+    <script  src="darkmode.js"></script>
+    <script src="tab.js"></script>
 </body>
 </html>
