@@ -198,53 +198,48 @@
         </div>
       </div>
     </section>
-    <div>
+    <!--<div>-->
 
   
     <!--Testimonial Carousel-->
-    <h2 class="montserrat">TESTIMONIALS</h2>
-      <div class="slider">
-        <div class="slid">
-      <div class="sliden">
-          <div class="testimonial-content">
-            <p>Gayaza High School shaped me into the woman I am today. Beyond academic excellence, it instilled in me discipline, leadership, and resilience.</p>
-             <p>The mentorship from teachers and the sisterhood among students created an environment that nurtured my confidence and ambition. I will always be proud to be a Gayaza girl!"</p>
-           </div>
-           <div class="testimonial-author">     
-             <p> Dr. Grace N., Medical Doctor- Alumni</p>
-           </div>
-         </div>
-      <div class="sliden">
-          <div class="testimonial-content">
-            <p>Sending my daughter to Gayaza High School was the best decision I made. She has grown into a confident, responsible, and well-rounded individual. The school provides a safe and nurturing environment where girls can thrive both academically and socially.</p> 
-            <p>I am grateful for the dedicated teachers and strong Christian values that define the school.</p>
-          </div>
-          <div class="testimonial-author">
-            <p> Mrs. Agnes Baine, Mother of a Student</p>
-          </div>
-         </div>
-      <div class="sliden">
-          <div class="testimonial-content">
-              <p>Gayaza High School gave me the foundation to become a leader. From debating competitions to prefectship roles, I learned the value of service, confidence, and discipline. The friendships I made here have lasted a lifetime, and I am proud to be part of this great legacy.</p>
-              <p>Gayaza girls are raised to lead, and I am a testament to that!"</p>
-          </div>
-          <div class="testimonial-author">
-              <p>Hon.Sarah K., Member of Parliament- Alumni</p>
-          </div>
-      </div>
-      <div class="sliden">
-          <div class="testimonial-content">
-              <p>Teaching at Gayaza High School has been an incredible experience. The students here are eager to learn, disciplined, and full of potential. What makes this school unique is its commitment to nurturing young women holistically, ensuring they excel not only academically but also in leadership and character.</p>
-              <p> It is a privilege to be part of this transformative journey</p>
-          </div>
-          <div class="testimonial-author">
-              <p> Mr. John M., Teacher</p>
-          </div>
-         </div>
-         </div>
-        <button class="back" onclick="prevSlide()">&#10094</button>
-         <button class="forward" onclick="nextslide()">&#10095</button>
+    <div class="slider">
+      <div class="slid">
+        <section class="testheader"><h2 class="montserrat">TESTIMONIALS</h2></section>
+    <section class="sliden">
+        <div class="testimonial-content active">
+            <img src="Images\Grace.avif">
+            <h3> Dr. Grace N., Medical Doctor- Alumni</h3>
+          <p>Gayaza High School shaped me into the woman I am today. Beyond academic excellence, it instilled in me discipline, leadership, and resilience.</p>
+           <p>The mentorship from teachers and the sisterhood among students created an environment that nurtured my confidence and ambition. I will always be proud to be a Gayaza girl!"</p>
         </div>
+    <div class="sliden">
+        <div class="testimonial-content">
+            <img src="Images\Agnes Baine.avif">
+            <h3> Mrs. Agnes Baine, Mother of a Student</h3>
+          <p>Sending my daughter to Gayaza High School was the best decision I made. She has grown into a confident, responsible, and well-rounded individual. The school provides a safe and nurturing environment where girls can thrive both academically and socially.</p> 
+          <p>I am grateful for the dedicated teachers and strong Christian values that define the school.</p>  
+       </div>
+        <div class="testimonial-content">
+            <img src="Images\Sarah_K.avif">
+            <h3>Hon.Sarah K., Member of Parliament- Alumni</h3>
+            <p>Gayaza High School gave me the foundation to become a leader. From debating competitions to prefectship roles, I learned the value of service, confidence, and discipline. The friendships I made here have lasted a lifetime, and I am proud to be part of this great legacy.</p>
+            <p>Gayaza girls are raised to lead, and I am a testament to that!"</p>
+        </div>
+        <div class="testimonial-content">
+            <img src="Images\John M.avif">
+            <h3> Mr. John M., Teacher</h3>
+            <p>Teaching at Gayaza High School has been an incredible experience. The students here are eager to learn, disciplined, and full of potential. What makes this school unique is its commitment to nurturing young women holistically, ensuring they excel not only academically but also in leadership and character.</p>
+            <p> It is a privilege to be part of this transformative journey</p>
+        </div>
+    </section>
+    <section class="indicators">
+        <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+        <div class="dot" attr='1' onclick="switchTest(this)"></div>
+        <div class="dot" attr='2' onclick="switchTest(this)"></div>
+        <div class="dot" attr='3' onclick="switchTest(this)"></div>
+    </section>    
+ </div>
+</div>
 
     
         <button id="darkModeToggle">
@@ -292,6 +287,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
   <script src="scripts.js"></script>
-  <script src="jscript.js"></script> 
+  <script src="jscript.js"></script>
+  <script src="test.js"></script> 
 </body>
 </html>

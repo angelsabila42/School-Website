@@ -215,66 +215,6 @@ if (hamburger && navMenu) { // Ensure elements exist
   
 });
 
-
-//Testimonials
-let count = 0;
-let i = 0;
-let testimonial = document.querySelectorAll(".sliden");
-
-
-function show(count){
-    testimonial.forEach(tes=>{
-        tes.style.display = "none";
-    })
-  testimonial[count].style.display = "block"
-}
-
-function slider(){
-  if(i<3){
-    i++;
-    console.log(i);
-      testimonial.forEach(tes=>{
-          tes.style.display = "none";
-      })
-    testimonial[i].style.display = "block"
-  }
-  else if(i==3){
-    i=0;
-    console.log(i);
-      testimonial.forEach(tes=>{
-          tes.style.display = "none";
-      })
-    testimonial[i].style.display = "block"
-  }
-   
-  }
-
-function prevSlide(){
-    if(count>0){
-        count--;
-        show(count);
-    }
-    else if(count==0){
-        count=3;
-
-    }
-    clearInterval(clear);
-}
-
-function nextslide(){
-    if(count<3){
-        count++;
-        show(count);
-    }
-    else if(count==3){
-        count=0;
-    }
-    clearInterval(clear)
-}
-
-let clear = setInterval(slider,4000);
-
-  
   //Function for the dark mode
     const toggleButton = document.getElementById('darkModeToggle');
     const icon = document.getElementById('themeIcon');
@@ -313,7 +253,25 @@ sbt.addEventListener("click", ()=>{
     alert("Form has been submitted")
 });
 
+//form validation
+const username = document.getElementById("name");
+const email = document.getElementById("email");
+const form = document.getElementById("formx");
+const errorElement = document.getElementById('error')
 
+form.addEventListener('submit', (e) =>{
+    let messages=[];
+    if(username.value===''||username.value==null){
+        messages.push('Name is required')
+    }
+    if(email.value.length > 20){
+        messages.push('Your email should not exeed 25 characters')
+    }
+    if(messages.length > 0){
+    e.preventDefault();
+    errorElement.innerText = messages.join(', ')
+}
+})
 
 
 
