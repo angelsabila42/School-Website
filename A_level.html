@@ -52,7 +52,7 @@
 
         <div class="cover-container"><img src="Images\A level.png" alt="A level students" class="cover-img"></div>
     
-    <b><h2 class="montserrat first-heading ">ADVANCED LEVEL</h2></b>
+    <b><h2 class="h-montserrat first-heading ">ADVANCED LEVEL</h2></b>
     <div class="level-container">
       <p> As one of the top schools for Government admissions each year, we offer a diverse range of A-Level subjects under the current Ugandan curriculum, 
         preparing students for any Arts or Science combination. Our well-structured program ensures that students qualify for professional courses at universities 
@@ -69,7 +69,7 @@
        <!--Sciences-->
        <b><h4 class="montserrat heading">Science Subjects</h4></b>
        <!--Accordion-->
-  <div class="section-panel">
+  <div class="section-panel block">
        <button class="accordion">Physics<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
        <p><b>Description</b>: Covers mechanics, electricity, waves, and modern physics. 
@@ -122,7 +122,7 @@
 
 <!--Arts-->
 <b><h4 class="montserrat heading">Humanities</h4></b>
-<div class="section-panel">
+<div class="section-panel block">
    <button class="accordion">Geography<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Covers physical geography (landforms, climate) and human geography (population, urbanization), 
@@ -160,7 +160,7 @@
 
    <!--Technical and Vocational-->
    <b><h4 class="montserrat heading">Technical and Vocational Subjects</h4></b>
-   <div class="section-panel">
+   <div class="section-panel block">
    <button class="accordion">Technical Drawing<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>: Develops drafting, architectural design, and engineering sketching skills essential for technical careers.</p>
@@ -186,7 +186,7 @@
 
 <!--Languages-->
 <b><h4 class="montserrat heading">Languages</h4></b> 
-<div class="section-panel"> 
+<div class="section-panel block"> 
    <button class="accordion">French<i class="fa-solid fa-plus"></i></button>
    <div class="panel">
     <p><b>Description</b>:  Enhances communication skills in reading, writing, listening, and speaking French,
@@ -213,7 +213,7 @@
 
 <!--Creative arts and Social Sciences-->
 <b><h4 class="montserrat heading">Creative Arts an Social Sciences</h4></b>
-<div class="section-panel">
+<div class="section-panel block">
     <button class="accordion">Literature in English<i class="fa-solid fa-plus"></i></button>
     <div class="panel">
     <p><b>Description</b>: Covers African and world literature, analyzing prose, poetry, and drama to enhance critical thinking 
@@ -253,7 +253,7 @@
 
     <!--Dynamic Table-->
     <div class="table-container"></div>
-    <b><h2 class="montserrat first-heading ">Teachers with their Respective Subject Allocations</h2></b>
+    <b><h3 class="montserrat heading">Teachers with their Respective Subject Allocations</h3></b>
     <form class="form-container" id="ac-form">
             <label for="subject">Subject</label><br>
             <input type="text" id="subject" name="subject"><br><br>
@@ -261,10 +261,10 @@
             <label for="teacher">Teacher</label><br>
             <input type="text" id="teacher" name="teacher"><br><br>
 
-            <button>Submit</button><br><br>
+            <button  class="dyn-table">Submit</button><br><br>
     </form>        
  
-            <table>
+            <table class="ac-table">
                 <thead>
                     <tr>
                         <th>Subject</th>
@@ -316,5 +316,6 @@
   
     </footer>
     <script src="scripts.js"></script>
+    <script src="jscript.js"></script>
 </body>
 </html>

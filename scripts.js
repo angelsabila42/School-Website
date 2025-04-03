@@ -201,40 +201,6 @@ function date(){
     date();
 
 
-//Function for the dynamic table
-const form = document.querySelector('form');
-const tbody = document.querySelector('tbody');
-const table = document.querySelector('table');
-
-function onAddContent(e) {
-e.preventDefault();
-const subject = document.getElementById('subject').value;
-const teacher = document.getElementById('teacher').value;
-tbody.innerHTML += `
-<tr>
-    <td>${subject}</td>
-    <td>${teacher}</td>
-    <td><button class="deleteBtn">Delete</button></td>
-</tr>
-`;
-}
-
-function onDeleteRow(e){
-    if (!e.target.classList.contains('deleteBtn')){
-        return;
-    }
-    const btn = e.target;
-    btn.closest("tr").remove();
-}
-  
-
-form.addEventListener("submit",onAddContent);
-
-table.addEventListener("click", onDeleteRow);
-  
-});
-
-//Testimonials
 let count = 0;
 let i = 0;
 let testimonial = document.querySelectorAll(".sliden");
@@ -278,6 +244,7 @@ function prevSlide(){
     }
     clearInterval(clear);
 }
+
 function nextslide(){
     if(count<3){
         count++;
@@ -288,8 +255,11 @@ function nextslide(){
     }
     clearInterval(clear)
 }
+
 let clear = setInterval(slider,4000);
+
   
+
  //Function for the dark mode
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.getElementById('darkModeToggle');
@@ -338,11 +308,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 //form submission java script
 const sbt =document.getElementById("mysubmit");
 sbt.addEventListener("click", ()=>{
     alert("Form has been submitted")
 });
+
 
 
 
@@ -353,3 +325,11 @@ $(document).ready(function () {
         time: 1200
     });
 });
+
+
+
+
+
+
+
+
