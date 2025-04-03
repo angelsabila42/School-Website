@@ -1,138 +1,274 @@
 
-//GALLERY JS//
-const relatedImages = {
-    school: [
-        'Images/sl1.PNG',
-        'Images/picture2.jpg',
-        'Images/s12.PNG',
-        'Images/picture4.jpg',
-        'Images/sl5.PNG',
-        'Images/schoollifenew.jpg',
-        'Images/sl6.PNG',
-        'Images/picture1.jpg',
-        'Images/chapel.jpg',
-        'Images/slnew.jpg'
-    ],
-    cultural: [
-        'Images/cd5.PNG',
-        'Images/cd4.PNG',
-        'Images/cd3.PNG',
-        'Images/cd2.PNG',
-        'Images/cd6.PNG',
-        'Images/cd7.PNG',
-        'Images/cd9.PNG'
-    ],
-    prom: [
-        'Images/prom.PNG',
-        'Images/prom1.PNG',
-        'Images/prom2.PNG',
-        'Images/prom3.PNG',
-        'Images/prom4.PNG',
-        'Images/prom5.PNG',
-        'Images/prom6.PNG',
-        'Images/prom7.PNG',
-        'Images/prom8.PNG',
-        'Images/prom10.PNG',
-        'Images/prom11.PNG',
-        'Images/prom12.PNG',
-        'Images/prom13.PNG'
-    ],
-    clubs: [
-        'Images/clubs1.PNG',
-        'Images/clubs2.PNG',
-        'Images/clubs3.PNG',
-        'Images/clubs4.PNG',
-        'Images/clubs5.PNG',
-        'Images/clubs6.PNG'
-    ],
-    sports: [
-        'Images/sportsday.jpg',
-        'Images/swimming.jpeg',
-        'Images/sports.jpg',
-        'Images/lacrosse2.jpg',
-        'Images/lacrosse.jpg',
-        'Images/hockey2.webp',
-        'Images/hockey.jpg'
-    ]
-};
+//scripts.js
 
-let currentIndex = 0; 
-let currentCategory = '';
+//let slideIndex = 0;
+document.addEventListener("DOMContentLoaded", function(){
+var acc = document.getElementsByClassName("accordion");
+//var i;
+/*showSlides();
 
-function openLightbox(category) {
-    currentCategory = category; // Set category
-    currentIndex = 0; // Start with the first image
-
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const relatedContainer = document.getElementById("related-images");
-
-    if (!relatedImages[currentCategory]) return; // Prevent errors if category is missing
-
-    console.log("Lightbox opened with:", relatedImages[currentCategory]); 
-    lightbox.style.display = "flex";
-    lightboxImg.src = relatedImages[currentCategory][currentIndex]; 
-
-    relatedContainer.innerHTML = "";
-    relatedImages[currentCategory].forEach((src, index) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.onclick = () => {
-            currentIndex = index; // Update index when clicking related images
-            lightboxImg.src = src;
-        };
-        relatedContainer.appendChild(img);
-    });
+// Function to show slides automatically
+function showSlides() {
+    let slides = document.querySelectorAll(".carousel-slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }  
+    slides[slideIndex - 1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
-function nextImage(event) {
-    event.stopPropagation(); // Prevent lightbox from closing
-    if (!relatedImages[currentCategory]) return; 
-    currentIndex = (currentIndex + 1) % relatedImages[currentCategory].length;
-    updateLightboxImage();
+// Function to manually control next/prev
+function changeSlide(n) {
+    slideIndex += n;
+    let slides = document.querySelectorAll(".carousel-slide");
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    if (slideIndex < 1) { slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}*/
+
+
+
+//Function for the dynamic calendar
+
+let clicked = null;
+ let counter =0;
+ let events = localStorage.getItem('events')? JSON.parse(localStorage.getItem('events')):[];
+
+ const calender = document.getElementById("calender");
+const monthDisplay = document.getElementById("month");
+  let weekDays = ['Sunday','Monday','Tuesday','Wednesday',]
+ const prevBtn = document.getElementById("prev");
+ const nextBtn = document.getElementById("next");
+ const deleteEventButton = document.getElementById("deleteBtn");
+ const closeEventBtn = document.getElementById("closeBtn");
+
+ let dates = document.getElementById("dates");
+ 
+ 
+ 
+ const eventPop = document.getElementById("event");
+ let eventInput = document.getElementById("eventInput");
+ let saveEventBtn = document.getElementById("saveEvent");
+ let cauncelEvent = document.getElementById("cauncelEvent");
+
+ 
+ function openModal(date){
+  clicked = date;
+  const eventOfTheDay = events.find(e => e.date ===clicked);
+  console.log(clicked)
+  if (eventOfTheDay){
+    deleteEventModal.style.display = "block";
+  } else{
+    eventPop.style.display = "block";
+  }
+ 
+ //closeModal();
 }
 
-function prevImage(event) {
-    event.stopPropagation(); // Prevent lightbox from closing
-    if (!relatedImages[currentCategory]) return;
-    currentIndex = (currentIndex - 1 + relatedImages[currentCategory].length) % relatedImages[currentCategory].length;
-    updateLightboxImage();
-}
+function date(){
+  
+  let dt = new Date();
+  if(counter !==0){
+    dt.setMonth(new Date().getMonth() + counter);
+  }
+  let day = dt.getDate();
+  let month = dt.getMonth();
+  let year = dt.getFullYear();
 
-function updateLightboxImage() {
-    const lightboxImg = document.getElementById("lightbox-img");
-    lightboxImg.src = relatedImages[currentCategory][currentIndex];
-}
+  let firstDayOfMonth = new Date(year,month, 1);
+  let firstDay = firstDayOfMonth.getDay()
+  const daysInMonth = new Date(year, month+1, 0).getDate();
 
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
-}
+  const dateString = firstDayOfMonth.toLocaleDateString('en-US',
+    {weekday:"long", month:"numeric", year: "numeric",day:"numeric"});
 
+    monthDisplay.textContent = `${dt.toLocaleDateString
+      ('en-US', {month: 'long'})} ${year}`;
 
+     
+     dates.innerHTML = '';
+  console.log(daysInMonth);
 
-//DARK MODE//
+  for(let i = 1; i <=firstDay+daysInMonth; i++){
+    const daySquare = document.createElement("div");
+   
+ const dayString = `${month+1}/${i-firstDay}/${year}`;
+  
+ if(i<firstDay){
+  daySquare.innerHTML = '';
+ 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('darkModeToggle');
-    const rootElement = document.documentElement; // Target the entire HTML document
+   }
 
-    // Check localStorage and apply dark mode if enabled
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        rootElement.classList.add('dark-mode');
-        toggleButton.checked = true; // Update switch state
+     else if(i>firstDay){
+      daySquare.innerHTML = i - firstDay;
+  
+      const eventForTheDay = events.find(e => e.date===dayString);
+      console.log(dateString)
+   
+       if(i - firstDay===0 && counter===0){
+        daySquare.classList.add("today");
+   }
+
+    if(eventForTheDay && eventForTheDay.title){
+    const eventDiv = document.createElement("div");
+    eventDiv.classList.add("eventDiv");
+    daySquare.classList.add("eventDiv")
+    eventDiv.innerHTML = (eventForTheDay.title);
+    daySquare.appendChild(eventDiv);
+
     }
 
-    // Toggle dark mode on button click
-    toggleButton.addEventListener('change', () => {
-        rootElement.classList.toggle('dark-mode');
+    daySquare.addEventListener('click', () =>  openModal(dayString));
 
-        // Save the state to localStorage
-        if (rootElement.classList.contains('dark-mode')) {
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-        }
-    });
+  } 
+  dates.appendChild(daySquare);
+}
+  }
+
+  function closeModal(){
+   deleteEventModal.style.display = 'none';
+    eventPop.style.display = 'none';
+   eventInput.value = "";
+    clicked = null;
+    }
+    function saveEvent(){
+      if(eventInput.value){
+         events.push({
+          date : clicked,
+          title : eventInput.value,
+         });
+         localStorage.setItem('events', JSON.stringify(events));
+     closeModal();
+  
+      }
+    }
+
+    function deleteEvent(){
+      events = events.filter(e => e.date!==clicked);
+      localStorage.setItem('events',JSON.stringify(events));
+      closeModal();
+      date();
+    }
+   
+
+
+    saveEventBtn.addEventListener('click', saveEvent);
+    cauncelEvent.addEventListener('click', closeModal);
+    deleteEventButton.addEventListener('click', deleteEvent);
+    closeEventBtn.addEventListener('click', closeModal);
+
+    function openEventModal(){
+      eventPop.style.display = "block";
+    }
+      nextBtn.onclick = function(){
+        counter++
+        date();
+      }
+      prevBtn.addEventListener('click', () =>{
+          counter--
+          date();
+      });
+    
+
+
+    date();
+
+
+let count = 0;
+let i = 0;
+let testimonial = document.querySelectorAll(".sliden");
+
+
+function show(count){
+    testimonial.forEach(tes=>{
+        tes.style.display = "none";
+    })
+  testimonial[count].style.display = "block"
+}
+
+function slider(){
+  if(i<3){
+    i++;
+    console.log(i);
+      testimonial.forEach(tes=>{
+          tes.style.display = "none";
+      })
+    testimonial[i].style.display = "block"
+  }
+  else if(i==3){
+    i=0;
+    console.log(i);
+      testimonial.forEach(tes=>{
+          tes.style.display = "none";
+      })
+    testimonial[i].style.display = "block"
+  }
+   
+  }
+
+function prevSlide(){
+    if(count>0){
+        count--;
+        show(count);
+    }
+    else if(count==0){
+        count=3;
+
+    }
+    clearInterval(clear);
+}
+
+function nextslide(){
+    if(count<3){
+        count++;
+        show(count);
+    }
+    else if(count==3){
+        count=0;
+    }
+    clearInterval(clear)
+}
+
+let clear = setInterval(slider,4000);
+
+  
+
+
+//HAMBURGER//
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) { // Ensure elements exist
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("active"); // Show or hide menu
+        });
+    } else {
+        console.error("Hamburger menu or navbar list not found.");
+    }
 });
+
+
+
+//form submission java script
+const sbt =document.getElementById("mysubmit");
+sbt.addEventListener("click", ()=>{
+    alert("Form has been submitted")
+});
+
+
+});
+
+
+
+
+
+
 
 

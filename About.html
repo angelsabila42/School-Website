@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gayaza High School</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Images/1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="tab.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/449a7ce769.js" crossorigin="anonymous"></script>
@@ -43,18 +45,29 @@
                 <li><a href="Gallery.html">Gallery</a></li>
                 <li><a href="Contact.html">Contact us</a></li>
             </ul>
+            <button class="hamburger" >☰</button>
           </nav>
          
     </header>
+
+    <div class="cover-container"><img src="Images\ghs_gate2.jpg" alt="School Gate" class="cover-img"></div>
         
        <main>
-        <div class="ttl">
+        <!--<div class="ttl">
             <h3>Our History.</h3>
+        </div>-->
+
+        <section>
+        <b><h2 class="h-montserrat first-heading ">ABOUT US</h2></b>
+        
+       <section class="history block">
+        <div>
+            <img src="Images\gayaza_history.jpg" alt="archives" id="headteacher" class="about-img">
         </div>
         
-       <section class="history">
-       <h3>Our History</h3>
-        <p>
+       <h4 class="content montserrat">Our History</h4>
+    <div class="content open-sans justify">
+    <p>
      Gayaza high school was founded by the Christian missionaries who belonged
      to the Church missionary society in 1905 on a land donated to the 
      Church by Kabaka Daudi Chwa II. <br> The school started with a population of 4
@@ -63,12 +76,29 @@
      "your friends". <br> It was in 1939, that the informal senior secondary school began and 
      later in 1962, the school was officially separated i.e,into the junior and the senior schools
     . From 4 girls, the twin Schools have gone on to become one of the Uganda's giant schools with an
-     enrollment of more than 1000 pupils and students respectively.</p> 
-    
+     enrollment of more than 1000 pupils and students respectively.
+    </p> 
     </div>
-        <div id="currently">
-    <h3> Us today</h3>  
-    
+       </section>
+
+       <section class="history block">
+       <div class="tabs" id="tabs">
+   
+        <button class="btns" id="usToday">Us today.</button>
+        <button class="btns" id="managementbtn">Our management.</button>
+        <button class="btns" id="locationbtn">Our location.</button>
+        <button class="btns" id="joinUsbtn">Join us</button>
+        <button class="btns" id="feesbtn">Our fees structure.</button>
+        </div>
+        </section>
+
+        <div  id="tabPars">
+            <div id="currently" class="pars">
+              <section class="history content block">
+                   
+    <h4 class="content montserrat">Us Today</h4>  
+
+    <div class="content open-sans justify">
     <p>
         Gayaza high school is still a Church of Uganda founded and a Gorvenment aided girls' boarding school
         with both O and A level, offering both Arts and Sciences with a number of co-curricular activities 
@@ -88,55 +118,66 @@
        Among other Beneficial activities.
      </p>
        </div>
-       <div class="management">
-       <h3>Our management</h3>
-       <span>
+       </section>
+       </div>
+
+       <div class="pars" id="management">
+       <section class="history content block">
+       <h4 class="content montserrat">Our management</h4>
+       <div class="content open-sans justify">
         Gayaza high school is headed by a head teacher (Currently Mrs Kizito Robinah Katongole)
          who is supported by two deputies and a director of studies. <br>
       We have three deans ie Dean for lower secondary(S1-S2), Dean for middle secondary(S3-S4),
       and Dean for upper School(S5-S6). <br>
       A senior man and a senior woman also support the school affairs regarding the student affairs. 
-       </span>
        </div>
-       <DIV class="location">
-        <h3>Our location</h3>
-        <span>
+    </div>
+
+       <div class="pars" id="direction">
+        <h4 class="content montserrat">Our location</h4>
+        <div class="content open-sans justify">
             <p>
-                Gayaza high school is located in Gayaza towmn,Gayaza zone B Lc1,Kasangati town council
-                ,Kyaddondo county, Wakiso district.
+            Gayaza high school is located in Gayaza towmn,Gayaza zone B Lc1,Kasangati town council
+            ,Kyaddondo county, Wakiso district.
             </p>
-        </span>
-       </DIV>
-         <div join us>
-            <h3>Join us</h3>
-            <p>
+        </div>
+       </div>
+
+         <div class="content justify pars" id="joinUs">
+            <h4 class="montserrat">Join us!</h4>
+            <p  class="open-sans justify">
             You can join Gayaza High school through using our on line platform
             <a href="www.gayazahs.sc.ug">Register now</a>.     
             </p>
-            <span>
-                <h3>our fees structure</h3>
-                <table border ="1">
+            </div>
+
+            <div class="content open-sans justify pars" id="fees">
+                <h4>Our fees structure</h4>
+                <table class="about-table">
                     <tr><th>NO</th><th>CLASS</th><th>AMOUNT</th></tr>
-                    <tr><td>1</td><td>S.1</td>  <td>600,000=</td></tr>
-                    <tr><td>2</td><td>S.2</td> <td>600,000=</td></tr>
-                    <tr><td>3</td><td>S.3</td> <td>600,000=</td></tr>
-                    <tr><td>4</td><td>S.4</td> <td>600,000=</td></tr>
-                    <tr><td>5</td><td>S.5</td> <td>600,000=</td></tr>
-                    <tr><td>6</td><td>S.6</td> <td>600,000=</td></tr>
+                    <tr><td>1</td><td>S.1</td> <td>UGX 2,434,450</td></tr>
+                    <tr><td>2</td><td>S.2</td> <td>UGX 2,434,500</td></tr>
+                    <tr><td>3</td><td>S.3</td> <td>UGX 2,553,100</td></tr>
+                    <tr><td>4</td><td>S.4</td> <td>UGX 2,580,350</td></tr>
+                    <tr><td>5</td><td>S.5</td> <td>UGX 2,600,350</td></tr>
+                    <tr><td>6</td><td>S.6</td> <td>UGX 2,610,200</td></tr>
                 </table>
-            </span>
-        <section class = "container">  
+            </div>
+        </div>
+
+        <section class = "container open-sans abt-content block">  
             <div class = "column light">
-             <h3>Our Motto</h3>
+             <h3 class="montserrat">Our Motto</h3>
                 Never give up.
             </div>
+
             <div class ="column dark">
-            <h3>Our Mission.</h3>
+            <h3 class="montserrat">Our Mission.</h3>
             To deliver a contemporary and quality secondary education that prepares
             girls to thrive in a dynamic world and contribute to national development.
         </div>
         <div class = "column light">
-            <h3>Core values</h3>
+            <h3 class="montserrat">Core values</h3>
             <ul>
         
                 <li>Godliness.</li>
@@ -148,15 +189,13 @@
             </ul>
         </div>
         </section>     
-           
-         </div>
-       </section>
+        </section>
 
-    <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider"></span>
-    </label>
-    
+       <button id="darkModeToggle">
+        <i id="themeIcon" class="fas fa-moon"></i> 
+    </button>
+    </section>
+
        </main>
     <!--Footer-->
     <footer class="footer">
@@ -187,11 +226,13 @@
            
         </div>
   
-        <h4>Opening Hours</h4>
-        <p>Open Monday to Friday: 9am-5pm</p>
+        <h4 class="open-sans">Opening Hours</h4>
+        <p class="open-sans">Open Monday to Friday: 9am-5pm</p>
         </div>
   
     </footer>
     <script src="scripts.js"></script>
+    <script  src="darkmode.js"></script>
+    <script src="tab.js"></script>
 </body>
 </html>
