@@ -74,6 +74,17 @@ h1, h2, h3 {
     float: right;
     display: block;
 }
+@media (max-width: 780px) {
+    .content {
+        flex-direction: column; /* Stack content vertically */
+        text-align: justify;
+    }
+    #greeting {
+        min-width: 100%;
+        padding: 20px; /* Reduce padding for small screens */
+    }
+}
+
 
 /* Hide hamburger menu by default */
 .hamburger {
@@ -86,6 +97,8 @@ h1, h2, h3 {
     .navbar {
         flex-direction: column; /* Stack items vertically */
         align-items: center;
+        position: relative; /* Ensure proper stacking context */
+        padding: 10px; /* Add some padding for aesthetics */
     }
 
     .navbar ul {
@@ -103,6 +116,8 @@ h1, h2, h3 {
         background: none;
         border: none;
         cursor: pointer;
+        position: absolute;
+        right: 20px; /* Position it to the right */ 
     }
 
     /* Ensure the navbar links are shown when active */
