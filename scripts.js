@@ -4,33 +4,6 @@
 //let slideIndex = 0;
 document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
-//var i;
-/*showSlides();
-
-// Function to show slides automatically
-function showSlides() {
-    let slides = document.querySelectorAll(".carousel-slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }  
-    slides[slideIndex - 1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-// Function to manually control next/prev
-function changeSlide(n) {
-    slideIndex += n;
-    let slides = document.querySelectorAll(".carousel-slide");
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    if (slideIndex < 1) { slideIndex = slides.length; }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}*/
-
 
 
 //Function for the dynamic calendar
@@ -240,19 +213,6 @@ let clear = setInterval(slider,4000);
   
 
 
-//HAMBURGER//
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".navbar ul");
-
-    if (hamburger && navMenu) { // Ensure elements exist
-        hamburger.addEventListener("click", function () {
-            navMenu.classList.toggle("active"); // Show or hide menu
-        });
-    } else {
-        console.error("Hamburger menu or navbar list not found.");
-    }
-});
 
 
 
