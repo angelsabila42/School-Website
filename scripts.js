@@ -236,8 +236,8 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault();
     errorElement.innerText = messages.join(', ')
 }
-})
 });
+
 
 
 
