@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
     tbody.appendChild(newRow);
     form.reset();
     }
-    
+    //To delete
     function onDeleteRow(e){
         if (!e.target.classList.contains('deleteBtn')){
             return;

@@ -1,44 +1,19 @@
 
 //scripts.js
 
-//let slideIndex = 0;
+
 document.addEventListener("DOMContentLoaded", function(){
 var acc = document.getElementsByClassName("accordion");
-//var i;
-/*showSlides();
 
-// Function to show slides automatically
-function showSlides() {
-    let slides = document.querySelectorAll(".carousel-slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }  
-    slides[slideIndex - 1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
-// Function to manually control next/prev
-function changeSlide(n) {
-    slideIndex += n;
-    let slides = document.querySelectorAll(".carousel-slide");
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    if (slideIndex < 1) { slideIndex = slides.length; }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}*/
 
 //Function to control the accordion
 for(var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function(){
          //Adds or removes the active class depending on whether it is present
-        this.classList.toggle("active");
+        this.classList.toggle("acctive");
 
         var icon = this.querySelector("i");
-        if (this.classList.contains("active")){
+        if (this.classList.contains("acctive")){
             icon.classList.replace("fa-plus", "fa-minus")
         } else {
             icon.classList.replace("fa-minus","fa-plus");
